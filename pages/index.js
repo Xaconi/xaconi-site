@@ -22,13 +22,13 @@ export default function Home({ markdownContent }) {
 
 			<Header></Header>
 
-			<main className={styles.main}>
-				<h1 className={styles.title}>
-					Welcome to <a href="#">Xaconi Site!</a>
-				</h1>
-			</main>
+			<section className={styles.section}>
+				<h1>Bienvenido a Xaconi.dev!🎉</h1>
+				<p>Aquí encontrarás mis posts sobre FrontEnd (Angular, Vue, React, NextJS...), BackEnd(JS, PHP...) y buenas prácticas. ME estoy forzando a escribir este blog para mejorar en mis habilidades de comunicación, y así aprovecho para aprender más cosas sobre el desarrollo web. Si tienes cualquier sugerencia, puedes enviarme una <code>Pull Request</code> al <a href="" target="_blank">repo público</a> de este blog y la reviso encantado.</p>
+			</section>
 
-			<section>
+			<section className={styles.section}>
+				<h1>Último post</h1>
 				<Article
 					title={ markdownContent.title }
 					image={ markdownContent.image }
