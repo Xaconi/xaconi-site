@@ -2,15 +2,16 @@ import styles from '../styles/Home.module.css'
 
 // NextJS Core
 import Head from 'next/head';
-import Image from 'next/image';
 
 // Node Code
 import fs from 'fs';
 import path from 'path';
 
 // Libs
-import Markdown from 'markdown-to-jsx';
 import fm from 'front-matter';
+
+// Components
+import Article from '../components/article';
 
 export default function Home({ markdownContent }) {
 	return (
@@ -27,9 +28,11 @@ export default function Home({ markdownContent }) {
 			</main>
 
 			<section>
-				Title: { markdownContent.title }
-				Image: <Image src={ markdownContent.image } width="128" height="128" />
-				<Markdown>{ markdownContent.content }</Markdown>
+				<Article
+					title={ markdownContent.title }
+					image={ markdownContent.image }
+					content={ markdownContent.content }>
+				</Article>
 			</section>
 
 			<footer className={styles.footer}>
