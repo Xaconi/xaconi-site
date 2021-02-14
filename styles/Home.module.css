@@ -9,7 +9,7 @@
 
 .section {
   width: 100%;
-  max-width: 1440px;
+  max-width: var(--size-screen-max);
   padding: 10px 30px;
 }
 
