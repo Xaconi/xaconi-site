@@ -19,4 +19,6 @@ a {
   /* Colors */
 	--color-blue : #0070F3;
   --color-dark-grey: #414141;
+  --color-light-grey: #e0e0e0;
+  --color-white: white;
 }
