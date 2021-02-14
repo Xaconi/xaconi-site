@@ -14,3 +14,9 @@ a {
 * {
   box-sizing: border-box;
 }
+
+:root {
+  /* Colors */
+	--color-blue : #0070F3;
+  --color-dark-grey: #414141;
+}

@@ -12,6 +12,7 @@ import fm from 'front-matter';
 
 // Components
 import Article from '../components/article';
+import Header from '../components/header';
 
 export default function Home({ markdownContent }) {
 	return (
@@ -20,6 +21,8 @@ export default function Home({ markdownContent }) {
 				<title>Xaconi Site 👨‍💻</title>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
+
+			<Header></Header>
 
 			<main className={styles.main}>
 				<h1 className={styles.title}>
