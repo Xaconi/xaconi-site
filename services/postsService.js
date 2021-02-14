@@ -23,7 +23,7 @@ export function getPostBySlug(slug) {
 
     const filenameFound = filenames.filter((filename) => filename === (slug + '.md'));
 
-    let markdownParsedContent = {};
+    let markdownParsedContent = null;
 
     if(filenameFound.length > 0) {
         const filePath = path.join(postsDirectory, filenameFound[0]);

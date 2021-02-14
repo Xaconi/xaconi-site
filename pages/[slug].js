@@ -22,30 +22,51 @@ export default function Post({ postContent }) {
 
 			<Header />
 
-			<section className={styles.section}>
-				<Article
-					title={ postContent.title }
-					image={ postContent.image }
-					content={ postContent.content }>
-				</Article>
-			</section>
+            {postContent.title != '' ?
+                <section className={styles.section}>
+                    <Article
+                        title={ postContent.title }
+                        image={ postContent.image }
+                        content={ postContent.content }>
+                    </Article>
+                </section>
+                :
+                <>
+                    404
+                </>
+            }
 
 			<Footer />
 		</div>
     );
 }
 
-export async function getServerSideProps({params}) {
+export async function getServerSideProps({ params, res }) {
     const post = getPostBySlug(params.slug);
 
-    return{
-        props : {
-            postContent : {
-				title : post.attributes.title,
-				description : post.attributes.description,
-				image : post.attributes.image,
-				content : post.body
-			}
-        }
-    };
+    if(post === null) {
+        res.statusCode = 404;
+        return {
+            props : {
+                postContent : {
+                    title : '',
+                    description : '',
+                    image : '',
+                    content : ''
+                }
+            }
+        };    
+    } else {
+        return{
+            props : {
+                postContent : {
+                    title : post.attributes.title,
+                    description : post.attributes.description,
+                    image : post.attributes.image,
+                    content : post.body
+                }
+            }
+        };
+    }
+    
 }
