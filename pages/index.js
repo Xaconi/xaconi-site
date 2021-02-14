@@ -1,5 +1,8 @@
-import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+
+// NextJS Core
+import Head from 'next/head';
+import Image from 'next/image';
 
 // Node Code
 import fs from 'fs';
@@ -7,6 +10,7 @@ import path from 'path';
 
 // Libs
 import Markdown from 'markdown-to-jsx';
+import fm from 'front-matter';
 
 export default function Home({ markdownContent }) {
 	return (
@@ -23,7 +27,9 @@ export default function Home({ markdownContent }) {
 			</main>
 
 			<section>
-				<Markdown>{ markdownContent }</Markdown>
+				Title: { markdownContent.title }
+				Image: <Image src={ markdownContent.image } width="128" height="128" />
+				<Markdown>{ markdownContent.content }</Markdown>
 			</section>
 
 			<footer className={styles.footer}>
@@ -47,9 +53,16 @@ export async function getStaticProps(context) {
 	const filePath = path.join(postsDirectory, 'test.md');
 	const fileContents = fs.readFileSync(filePath, 'utf8');
 
+	const mardownFrontData = fm(fileContents);
+
 	return {
 	  	props: {
-			markdownContent : fileContents
+			markdownContent : {
+				title : mardownFrontData.attributes.title,
+				description : mardownFrontData.attributes.description,
+				image : mardownFrontData.attributes.image,
+				content : mardownFrontData.body
+			}
 	  	},
 	}
 }

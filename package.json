@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "front-matter": "^4.0.2",
     "markdown-to-jsx": "^7.1.1",
     "next": "10.0.6",
     "react": "17.0.1",
