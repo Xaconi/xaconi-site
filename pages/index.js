@@ -9,7 +9,7 @@ import Article from '../components/article';
 import Header from '../components/header';
 import Footer from '../components/footer';
 
-// Hooks
+// Services
 import getLastPost from '../services/postsService';
 
 export default function Home({ markdownContent }) {
