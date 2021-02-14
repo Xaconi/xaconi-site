@@ -10,7 +10,7 @@ import Header from '../components/header';
 import Footer from '../components/footer';
 
 // Hooks
-import getLastArticle from '../services/articlesService';
+import getLastPost from '../services/postsService';
 
 export default function Home({ markdownContent }) {
 	return (
@@ -42,7 +42,7 @@ export default function Home({ markdownContent }) {
 }
 
 export async function getStaticProps() {
-	const mardownFrontData = getLastArticle();
+	const mardownFrontData = getLastPost();
 
 	return {
 	  	props: {

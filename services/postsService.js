@@ -5,7 +5,7 @@ import path from 'path';
 // Libs
 import fm from 'front-matter';
 
-export default function getLastArticle() {
+export default function getLastPost() {
     const postsDirectory = path.join(process.cwd(), 'posts');
     const filenames = fs.readdirSync(postsDirectory);
 
