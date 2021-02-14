@@ -20,7 +20,7 @@ export default function Home({ markdownContent }) {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			<Header></Header>
+			<Header />
 
 			<section className={styles.section}>
 				<h1>Bienvenido a Xaconi.dev!🎉</h1>
@@ -36,7 +36,7 @@ export default function Home({ markdownContent }) {
 				</Article>
 			</section>
 
-			<Footer></Footer>
+			<Footer />
 		</div>
   	)
 }
