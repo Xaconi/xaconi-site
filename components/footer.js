@@ -4,15 +4,15 @@ import styles from '../styles/Footer.module.css';
 export default function Footer() {
     return(
         <footer className={styles.footer}>
-            <a href="#">
+            <a href="https://twitter.com/xaconi">
                 Twitter
             </a>
             ·
-            <a href="#">
+            <a href="https://github.com/Xaconi">
                 GitHub
             </a>
             ·
-            <a href="#">
+            <a href="mailto:nicolas.giacconi@gmail.com">
                 Contacto
             </a>
             ·
