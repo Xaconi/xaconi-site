@@ -3,6 +3,11 @@
     margin: 0 auto;
 }
 
+.img {
+    margin: 0 auto;
+    display: block;
+}
+
 .share {
     display: flex;
     align-items: center;
