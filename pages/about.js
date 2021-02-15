@@ -22,7 +22,12 @@ export default function About() {
 
                 <section className={stylesAbout.aboutRow}>
                     <div className={stylesAbout.aboutColumn}>
-                        <img className={stylesAbout.imgRound} src="/xaconi.jpg" />
+                        <img 
+                            className={stylesAbout.imgRound} 
+                            src="/xaconi.jpg"
+                            width="250"
+                            height="250"
+                        />
                         <h3>Hola 👋, soy Xaconi!</h3>
                         <h4>Puedes seguirme en <a href="https://twitter.com/xaconi" target="_blank">Twitter 🐦</a> o en <a href="https://github.com/Xaconi" target="_blank">GitHub 🦑</a></h4>
                     </div>
