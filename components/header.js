@@ -1,5 +1,5 @@
 // NextJS Core
-import Image from 'next/image';
+import Link from 'next/link'
 
 // Styles
 import stylesHeader from '../styles/Header.module.css';
@@ -7,17 +7,23 @@ import stylesHeader from '../styles/Header.module.css';
 export default function Header() {
     return(
         <header className={stylesHeader.header}>
-            <a className={stylesHeader.logo}>
-                Xaconi.dev
-            </a>
+            <Link href="/">
+                <a className={stylesHeader.logo}>
+                    Xaconi.dev
+                </a>
+            </Link>
             <nav>
-                <a href="#">
-                    <span>Posts</span>
-                </a>
+                <Link href="/posts">
+                    <a>
+                        <span>Posts</span>
+                    </a>
+                </Link>
 
-                <a href="#">
-                    <span>Sobre mí</span>
-                </a>
+                <Link href="/about">
+                    <a>
+                        <span>Sobre mí</span>
+                    </a>
+                </Link>
 
                 <a href="https://twitter.com/xaconi" target="_blank">
                     <img src="/twitter_logo.svg" width="24" height="24" />
