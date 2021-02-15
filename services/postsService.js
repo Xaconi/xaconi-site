@@ -34,3 +34,21 @@ export function getPostBySlug(slug) {
 
     return markdownParsedContent;
 }
+
+export function getAllPosts() {
+    const postsDirectory = path.join(process.cwd(), 'posts');
+    const filenames = fs.readdirSync(postsDirectory);
+
+    let posts = Array();
+
+    if(filenames.length > 0) {
+        filenames.map((filename) => {
+            const filePath = path.join(postsDirectory, filename);
+            const fileContents = fs.readFileSync(filePath, 'utf8');
+
+            posts.push(fm(fileContents));
+        })
+    }
+
+    return posts;
+}
