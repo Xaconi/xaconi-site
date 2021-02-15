@@ -11,6 +11,7 @@
 
 .logo {
     margin-right: auto;
+    font-size: 18px;
 }
 
 .header nav {
@@ -28,4 +29,17 @@
 
 .header nav a * {
     display: block;
+}
+
+@media (max-width : 475px) {
+    .logo {
+        font-size: 14px;
+    }
+
+    .header nav a {
+        padding: 5px 6px;
+        display: block;
+        font-size: 14px;
+        border-radius: 5px;
+    }
 }
