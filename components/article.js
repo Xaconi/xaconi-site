@@ -18,6 +18,12 @@ export default function Article({title, image, content}) {
             />
             <h1>{ title }</h1>
             <Markdown>{ content }</Markdown>
+            <div className={postStyles.share}>
+                Comparte!
+                <a href="https://twitter.com/xaconi" target="_blank">
+                    <img src="/twitter_logo.svg" width="24" height="24" />
+                </a>
+            </div>
         </section>
     );
 }

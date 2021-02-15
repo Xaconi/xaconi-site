@@ -3,6 +3,12 @@
     margin: 0 auto;
 }
 
-.img {
-    width: 100%;
+.share {
+    display: flex;
+    align-items: center;
+}
+
+.share a {
+    display: block;
+    margin-left: 10px;
 }
