@@ -4,11 +4,19 @@ import Image from 'next/image';
 // Libs
 import Markdown from 'markdown-to-jsx';
 
+// Styles
+import postStyles from '../styles/Post.module.css';
+
 export default function Article({title, image, content}) {
     return(
-        <section>
+        <section className={postStyles.post}>
+            <Image 
+                height="320" 
+                layout="responsive" 
+                src={ image } 
+                width="720" 
+            />
             <h1>{ title }</h1>
-            <Image src={ image } width="128" height="128" />
             <Markdown>{ content }</Markdown>
         </section>
     );

@@ -1,7 +1,7 @@
 ---
 title: Test article
 date: '2021-02-14'
-image: '/js_logo.png'
+image: '/js_image.png'
 description: Tst description.
 tags:
 - test

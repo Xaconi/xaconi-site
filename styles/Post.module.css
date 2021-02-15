@@ -1,0 +1,8 @@
+.post {
+    max-width: var(--size-post-max);
+    margin: 0 auto;
+}
+
+.img {
+    width: 100%;
+}

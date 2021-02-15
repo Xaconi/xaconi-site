@@ -24,4 +24,10 @@ a {
 
 	/* Sizes */
 	--size-screen-max: 1440px;
+  --size-post-max: 1024px;
+}
+
+/* Titles */
+h1 {
+  font-size: 28px;
 }
