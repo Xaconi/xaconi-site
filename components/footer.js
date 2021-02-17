@@ -7,15 +7,22 @@ export default function Footer() {
             <a href="https://twitter.com/xaconi">
                 Twitter
             </a>
-            ·
+            
             <a href="https://github.com/Xaconi">
                 GitHub
             </a>
-            ·
+            
             <a href="mailto:nicolas.giacconi@gmail.com">
                 Contacto
             </a>
-            ·
+            
+            <a 
+                className={styles.left}
+                href="https://nextjs.org/" 
+                target="_blank">
+                Made with NextJS
+            </a>
+            
             <a
                 href="https://vercel.com/"
                 target="_blank"
@@ -24,6 +31,7 @@ export default function Footer() {
                 Powered by
                 <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
             </a>
+
         </footer>
     );
 }
