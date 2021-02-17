@@ -1,5 +1,6 @@
 // Styles
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Home.module.css';
+import stylesPosts from '../styles/Posts.module.css'
 
 // NextJS Core
 import Head from 'next/head';
@@ -23,15 +24,19 @@ export default function Posts({ posts }) {
 			<Header />
 
 			<section className={styles.section}>
-                {posts.map((post) => {
-                    return (
-                        <ArticleCard
-                            title={post.attributes.title}
-                            description={post.attributes.description}
-                            image={post.attributes.image}
-                        />
-                    )
-                })}
+				<h1>Mis Posts</h1>
+				<div className={stylesPosts.articles}>
+					{posts.map((post) => {
+						return (
+							<ArticleCard
+								title={post.attributes.title}
+								description={post.attributes.description}
+								image={post.attributes.image}
+								link={post.attributes.link}
+							/>
+						)
+					})}
+				</div>
 			</section>
 
 			<Footer />

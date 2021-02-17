@@ -1,0 +1,23 @@
+.articles {
+    max-width: var(--size-post-max);
+    margin: 0 auto;
+}
+
+.article {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.article img {
+    width: 30%;
+    margin-right: 30px;
+    object-fit: cover;
+}
+
+.article-info {
+    /* display: flex;
+    flex-direction: row;
+    width: 100%; */
+}

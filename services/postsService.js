@@ -46,7 +46,11 @@ export function getAllPosts() {
             const filePath = path.join(postsDirectory, filename);
             const fileContents = fs.readFileSync(filePath, 'utf8');
 
-            posts.push(fm(fileContents));
+            const fileContentsParsed = fm(fileContents);
+
+            fileContentsParsed.attributes.link = filename.replace('.md', '');
+
+            posts.push(fileContentsParsed);
         })
     }
 
