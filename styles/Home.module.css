@@ -36,8 +36,12 @@
 }
 
 @media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
+	.grid {
+		width: 100%;
+		flex-direction: column;
+	}
+
+	.section {
+		padding: 10px 5px;
+	  }
 }
