@@ -16,8 +16,29 @@
     object-fit: cover;
 }
 
-.article-info {
-    /* display: flex;
-    flex-direction: row;
-    width: 100%; */
+.articleInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.articleInfo h2 {
+    margin: 0;
+}
+
+.articleInfo p {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+    margin: 5px 0 0 0;
+}
+
+@media (max-width : 475px) {
+    .articleInfo h2 {
+        font-size: 16px;    }
+    
+    .articleInfo p {
+        font-size: 14px;
+    }
 }
