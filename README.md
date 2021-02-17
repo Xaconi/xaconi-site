@@ -5,5 +5,7 @@ This is the public repository my personal blog, here you can find stuff related 
 TODO things to do on my blog
 - [ ] Design
 - [ ] Home page
-- [ ] Article page
-- [ ] First article
+- [x] Post page
+- [x] Posts page
+- [x] About me page
+- [ ] First post!
