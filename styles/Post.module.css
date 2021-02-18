@@ -1,6 +1,6 @@
 .post {
     max-width: var(--size-post-max);
-    margin: 0 auto;
+    margin: 30px auto 30px auto;
 }
 
 .img {
