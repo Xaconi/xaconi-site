@@ -30,7 +30,11 @@ export default function Article({title, image, content, link}) {
             <Markdown>{ content }</Markdown>
             <div className={postStyles.share}>
                 Comparte!
-                <a href={`https://twitter.com/intent/tweet?text=${title}&url=${url}/${link}`} target="_blank">
+                <a 
+                    href={`https://twitter.com/intent/tweet?text=${title}&url=${url}/${link}`} 
+                    rel="nofollow"
+                    target="_blank"
+                >
                     <img src="/twitter_logo.svg" width="18" height="18" />
                 </a>
             </div>

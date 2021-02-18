@@ -3,7 +3,6 @@ import styles from '../styles/Home.module.css'
 
 // NextJS Core
 import Head from 'next/head';
-import { useRouter } from 'next/router';
 
 // Components
 import Article from '../components/article';
@@ -14,10 +13,6 @@ import Footer from '../components/footer';
 import { getPostBySlug } from '../services/postsService';
 
 export default function Post({ postContent }) {
-    const router = useRouter();
-
-    console.log(router);
-
     return (
         <div className={styles.container}>
 			<Head>

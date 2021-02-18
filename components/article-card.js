@@ -7,7 +7,7 @@ import Link from 'next/link';
 export default function ArticleCard({ title, image, description, link }) {
     return(
         <Link href={`/${link}`}>
-            <a>
+            <a title={title}>
                 <article className={stylesPosts.article}>
                     <img src={ image } />
                     <div className={stylesPosts.articleInfo}>
