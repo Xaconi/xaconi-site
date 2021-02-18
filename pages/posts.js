@@ -33,6 +33,7 @@ export default function Posts({ posts }) {
 								description={post.attributes.description}
 								image={post.attributes.image}
 								link={post.attributes.link}
+								key={post.attributes.link}
 							/>
 						)
 					})}

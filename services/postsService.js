@@ -14,6 +14,8 @@ export default function getLastPost() {
 
     const markdownParsedContent = fm(fileContents);
 
+    markdownParsedContent.attributes.link = filenames[0].replace('.md', '');
+
     return markdownParsedContent;
 }
 

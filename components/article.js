@@ -1,6 +1,9 @@
 // NextJS Core
 import Image from 'next/image';
 
+// React
+import { useState, useEffect } from 'react';
+
 // Libs
 import Markdown from 'markdown-to-jsx';
 
@@ -8,6 +11,12 @@ import Markdown from 'markdown-to-jsx';
 import postStyles from '../styles/Post.module.css';
 
 export default function Article({title, image, content, link}) {
+
+    const [url, setURL] = useState(0);
+    useEffect(() => {
+        setURL(window.location.hostname);
+    });
+
     return(
         <section className={postStyles.post}>
             <img 
@@ -21,7 +30,7 @@ export default function Article({title, image, content, link}) {
             <Markdown>{ content }</Markdown>
             <div className={postStyles.share}>
                 Comparte!
-                <a href={`https://twitter.com/intent/tweet?text=${title}&url=${window.location.hostname}/${link}`} target="_blank">
+                <a href={`https://twitter.com/intent/tweet?text=${title}&url=${url}/${link}`} target="_blank">
                     <img src="/twitter_logo.svg" width="18" height="18" />
                 </a>
             </div>

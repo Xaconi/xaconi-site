@@ -12,7 +12,7 @@ import Footer from '../components/footer';
 // Services
 import getLastPost from '../services/postsService';
 
-export default function Home({ markdownContent }) {
+export default function Home({ lastPost }) {
 	return (
 		<div className={styles.container}>
 			<Head>
@@ -30,9 +30,11 @@ export default function Home({ markdownContent }) {
 			<section className={styles.section}>
 				<h1>Último post</h1>
 				<Article
-					title={ markdownContent.title }
-					image={ markdownContent.image }
-					content={ markdownContent.content }>
+					title={ lastPost.title }
+					image={ lastPost.image }
+					content={ lastPost.content }
+					link={ lastPost.link }
+				>
 				</Article>
 			</section>
 
@@ -42,15 +44,16 @@ export default function Home({ markdownContent }) {
 }
 
 export async function getStaticProps() {
-	const mardownFrontData = getLastPost();
+	const lastPost = getLastPost();
 
 	return {
 	  	props: {
-			markdownContent : {
-				title : mardownFrontData.attributes.title,
-				description : mardownFrontData.attributes.description,
-				image : mardownFrontData.attributes.image,
-				content : mardownFrontData.body
+			lastPost : {
+				title : lastPost.attributes.title,
+				description : lastPost.attributes.description,
+				image : lastPost.attributes.image,
+				content : lastPost.body,
+				link : lastPost.attributes.link
 			}
 	  	},
 	}
