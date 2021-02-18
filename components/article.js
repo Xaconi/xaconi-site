@@ -7,7 +7,7 @@ import Markdown from 'markdown-to-jsx';
 // Styles
 import postStyles from '../styles/Post.module.css';
 
-export default function Article({title, image, content}) {
+export default function Article({title, image, content, link}) {
     return(
         <section className={postStyles.post}>
             <img 
@@ -21,7 +21,7 @@ export default function Article({title, image, content}) {
             <Markdown>{ content }</Markdown>
             <div className={postStyles.share}>
                 Comparte!
-                <a href="https://twitter.com/xaconi" target="_blank">
+                <a href={`https://twitter.com/intent/tweet?text=${title}&url=${window.location.hostname}/${link}`} target="_blank">
                     <img src="/twitter_logo.svg" width="18" height="18" />
                 </a>
             </div>

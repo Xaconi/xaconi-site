@@ -30,6 +30,8 @@ export function getPostBySlug(slug) {
         const fileContents = fs.readFileSync(filePath, 'utf8');
 
         markdownParsedContent = fm(fileContents);
+
+        markdownParsedContent.attributes.link = filenameFound[0].replace('.md', '');
     }
 
     return markdownParsedContent;
