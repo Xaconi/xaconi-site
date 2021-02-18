@@ -7,7 +7,7 @@ tags:
 - test
 ---
 
-### This is a test Heading ###
+## This is a test Heading ##
 
 And this is a test paragraph.
 

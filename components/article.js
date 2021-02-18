@@ -33,10 +33,15 @@ export default function Article({title, image, content, link}) {
                     Comparte!
                     <a 
                         href={`https://twitter.com/intent/tweet?text=${title}&url=${url}/${link}`} 
-                        rel="nofollow"
+                        rel="nofollow noopener noreferrer"
                         target="_blank"
                     >
-                        <img src="/twitter_logo.svg" width="18" height="18" />
+                        <img 
+                            alt="Comparte en Twitter"
+                            src="/twitter_logo.svg" 
+                            width="18" 
+                            height="18" 
+                        />
                     </a>
                 </div>
             </article>

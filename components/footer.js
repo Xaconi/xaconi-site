@@ -4,26 +4,41 @@ import styles from '../styles/Footer.module.css';
 export default function Footer() {
     return(
         <footer className={styles.footer}>
-            <a href="https://twitter.com/xaconi">
+            <a 
+                aria-label="Sígueme en Twitter"
+                href="https://twitter.com/xaconi"
+                rel="nofollow noopener noreferrer"
+            >
                 Twitter
             </a>
             
-            <a href="https://github.com/Xaconi">
+            <a 
+                aria-label="GitHub de @Xaconi"
+                href="https://github.com/Xaconi"
+                rel="nofollow noopener noreferrer"
+            >
                 GitHub
             </a>
             
-            <a href="mailto:nicolas.giacconi@gmail.com">
+            <a 
+                aria-label="Contacta conmigo!"
+                href="mailto:nicolas.giacconi@gmail.com"
+            >
                 Contacto
             </a>
             
             <a 
+                aria-label="Made with NextJS"
                 className={styles.left}
                 href="https://nextjs.org/" 
-                target="_blank">
+                rel="nofollow noopener noreferrer"
+                target="_blank"
+            >
                 Made with NextJS
             </a>
             
             <a
+                aria-label="Powered by Vercel"
                 href="https://vercel.com/"
                 target="_blank"
                 rel="noopener noreferrer"
