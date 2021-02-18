@@ -19,25 +19,27 @@ export default function Article({title, image, content, link}) {
 
     return(
         <section className={postStyles.post}>
-            <img 
-                alt={title}
-                className={postStyles.img}
-                height="260" 
-                src={ image } 
-                width="640" 
-            />
-            <h1>{ title }</h1>
-            <Markdown>{ content }</Markdown>
-            <div className={postStyles.share}>
-                Comparte!
-                <a 
-                    href={`https://twitter.com/intent/tweet?text=${title}&url=${url}/${link}`} 
-                    rel="nofollow"
-                    target="_blank"
-                >
-                    <img src="/twitter_logo.svg" width="18" height="18" />
-                </a>
-            </div>
+            <article>
+                <img 
+                    alt={title}
+                    className={postStyles.img}
+                    height="260" 
+                    src={ image } 
+                    width="640" 
+                />
+                <h1>{ title }</h1>
+                <Markdown>{ content }</Markdown>
+                <div className={postStyles.share}>
+                    Comparte!
+                    <a 
+                        href={`https://twitter.com/intent/tweet?text=${title}&url=${url}/${link}`} 
+                        rel="nofollow"
+                        target="_blank"
+                    >
+                        <img src="/twitter_logo.svg" width="18" height="18" />
+                    </a>
+                </div>
+            </article>
         </section>
     );
 }
