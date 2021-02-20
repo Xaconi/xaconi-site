@@ -58,5 +58,12 @@ export function getAllPosts() {
         })
     }
 
+    // Date DESC sort
+    posts.sort((elementA, elementB) => {
+        return new Date(elementB.attributes.date) - new Date(elementA.attributes.date);
+    });
+
+    console.log(posts);
+
     return posts;
 }
