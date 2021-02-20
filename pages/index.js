@@ -16,7 +16,7 @@ export default function Home({ lastPost }) {
 	return (
 		<div className={styles.container}>
 			<Head>
-				<title>Xaconi Site 👨‍💻</title>
+				<title>Xaconi.dev 👨‍💻</title>
 				<meta name="description" content="Posts sobre desarrollo web, FrontEnd (Angular, React, Vue, etc.), BackEnd (JavaScript, PHP, etc.) y buenas prácticas."></meta>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>

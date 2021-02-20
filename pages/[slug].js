@@ -16,7 +16,7 @@ export default function Post({ postContent }) {
     return (
         <div className={styles.container}>
 			<Head>
-				<title>Xaconi Site 👨‍💻 | {postContent.title}</title>
+				<title>Xaconi.dev 👨‍💻 | {postContent.title}</title>
                 <meta name="description" content={postContent.description}></meta>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>

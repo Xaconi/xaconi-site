@@ -14,7 +14,7 @@ export default function About() {
         <>
             <div className={styles.container}>
                 <Head>
-                    <title>Xaconi Site 👨‍💻 | Sobre mí</title>
+                    <title>Xaconi.dev 👨‍💻 | Sobre mí</title>
                     <meta name="description" content="Acerca de mí, quién soy, a qué me dedico, etc."></meta>
                     <link rel="icon" href="/favicon.ico" />
                 </Head>
