@@ -14,5 +14,6 @@ TODO things to do on my blog
 
 #### Article Ideas ####
 
+* Simple date and time to read React component used on the blog
 * Dynamic OG images on post microbrowsers share
-* Dynamic code highlight on post page
+* Dynamic code highlight component on post page
