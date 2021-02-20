@@ -6,17 +6,9 @@ import path from 'path';
 import fm from 'front-matter';
 
 export default function getLastPost() {
-    const postsDirectory = path.join(process.cwd(), 'posts');
-    const filenames = fs.readdirSync(postsDirectory);
+    const posts = getAllPosts();
 
-    const filePath = path.join(postsDirectory, 'test.md');
-    const fileContents = fs.readFileSync(filePath, 'utf8');
-
-    const markdownParsedContent = fm(fileContents);
-
-    markdownParsedContent.attributes.link = filenames[0].replace('.md', '');
-
-    return markdownParsedContent;
+    return posts[0];
 }
 
 export function getPostBySlug(slug) {
