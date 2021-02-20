@@ -17,7 +17,8 @@ export default function Posts({ posts }) {
     return(
         <div className={styles.container}>
 			<Head>
-				<title>Xaconi Site 👨‍💻</title>
+				<title>Xaconi Site 👨‍💻 | Posts</title>
+				<meta name="description" content="Aquí tienes la lista de posts de mi Blog. Artículos sobre FrontEnd (Angular, React, Vue, etc.), BackEnd (JavaScript, PHP, etc.) y buenas prácticas. Un poco de todo!"></meta>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 

@@ -14,7 +14,8 @@ export default function About() {
         <>
             <div className={styles.container}>
                 <Head>
-                    <title>Xaconi Site 👨‍💻</title>
+                    <title>Xaconi Site 👨‍💻 | Sobre mí</title>
+                    <meta name="description" content="Acerca de mí, quién soy, a qué me dedico, etc."></meta>
                     <link rel="icon" href="/favicon.ico" />
                 </Head>
 
@@ -23,6 +24,7 @@ export default function About() {
                 <section className={stylesAbout.aboutRow}>
                     <div className={stylesAbout.aboutColumn}>
                         <img 
+                            alt="@Xaconi"
                             className={stylesAbout.imgRound} 
                             src="/xaconi.jpg"
                             width="250"

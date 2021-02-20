@@ -9,7 +9,10 @@ export default function ArticleCard({ title, image, description, link }) {
         <Link href={`/${link}`}>
             <a title={title}>
                 <article className={stylesPosts.article}>
-                    <img src={ image } />
+                    <img 
+                        alt={ title }
+                        src={ image } 
+                    />
                     <div className={stylesPosts.articleInfo}>
                         <h2>{ title }</h2>
                         <p>{ description }</p>
