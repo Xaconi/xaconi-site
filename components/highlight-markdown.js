@@ -1,18 +1,21 @@
-// React
-import { useRef, useEffect } from 'react';
+// Components
+import CodeBlock from '../components/code-block';
 
 // Libs
 import Markdown from 'markdown-to-jsx';
-// import hljs from 'highlight.js';
-import Prism from 'prismjs';
 
 export default function HighLightMarkdown ({ children }) {
-    useEffect(() => {
-        // hljs.highlightAll();
-        Prism.highlightAll();
-    });
-
     return (
-        <Markdown>{children}</Markdown>
+        <Markdown
+            options={{
+                overrides: {
+                    pre: {
+                        component: CodeBlock,
+                    },
+                },
+            }}
+        >
+            {children}
+        </Markdown>
     );
 }
