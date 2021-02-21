@@ -11,9 +11,9 @@ export default function CodeBlock({ children }) {
     });
 
     return(
-        <code-block data-lang={language}>
+        <code-block>
             <pre className={`  language-${language}`}>
-                <code className={`  language-${language}`}>
+                <code className={`  language-${language}`} data-lang={language}>
                     { children.props.children }
                 </code>
             </pre>

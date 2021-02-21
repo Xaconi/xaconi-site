@@ -27,6 +27,9 @@ p a {
 	--color-light-grey: #e0e0e0;
 	--color-white: white;
 
+  /* Languages Colors */
+  --color-javascript : #F7DF1E;
+
 	/* Sizes */
 	--size-screen-max: 1440px;
   --size-post-max: 1024px;

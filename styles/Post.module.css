@@ -29,7 +29,7 @@
     display: block;
 }
 
-.post code-block::after {
+.post code::after {
     content: attr(data-lang);
     position: absolute;
     top: -14px;
@@ -38,4 +38,9 @@
     padding: 4px 10px;
     border-radius: 5px;
     font-family: monospace;
+}
+
+.post code[data-lang='javascript']::after {
+    background-color : var(--color-javascript);
+    color: var(--color-dark-grey);
 }
