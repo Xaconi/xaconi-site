@@ -12,3 +12,41 @@ tags:
 And this is a test paragraph.
 
 Test done `oki doki` ok?
+
+Test code
+
+<code-block data-lang="javascript">
+```javascript
+// Test comment
+const test = 2;
+export async function getServerSideProps({ params, res }) {
+    const post = getPostBySlug(params.slug);
+
+    if(post === null) {
+        res.statusCode = 404;
+        return {
+            props : {
+                postContent : {
+                    title : 'test',
+                    description : '',
+                    image : '',
+                    content : ''
+                }
+            }
+        };    
+    } else {
+        return{
+            props : {
+                postContent : {
+                    title : post.attributes.title,
+                    description : post.attributes.description,
+                    image : post.attributes.image,
+                    content : post.body,
+                    link : post.attributes.link
+                }
+            }
+        };
+    }
+}
+```
+</code-block>
