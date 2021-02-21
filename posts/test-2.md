@@ -15,7 +15,6 @@ Test done `oki doki` ok?
 
 Test code
 
-<code-block data-lang="javascript">
 ```javascript
 // Test comment
 const test = 2;
@@ -49,4 +48,3 @@ export async function getServerSideProps({ params, res }) {
     }
 }
 ```
-</code-block>

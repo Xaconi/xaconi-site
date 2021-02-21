@@ -23,3 +23,19 @@
 .post pre {
     width: 100%;
 }
+
+.post code-block {
+    position: relative;
+    display: block;
+}
+
+.post code-block::after {
+    content: attr(data-lang);
+    position: absolute;
+    top: -14px;
+    right: 12px;
+    background-color: yellow;
+    padding: 4px 10px;
+    border-radius: 5px;
+    font-family: monospace;
+}

@@ -1,8 +1,11 @@
 // React
 import { useState, useEffect } from 'react';
 
+// Libs
+import Markdown from 'markdown-to-jsx';
+
 // Components
-import HighLightMarkdown from '../components/highlight-markdown';
+import CodeBlock from '../components/code-block';
 
 // Styles
 import postStyles from '../styles/Post.module.css';
@@ -25,7 +28,17 @@ export default function Article({title, image, content, link}) {
                     width="640" 
                 />
                 <h1>{ title }</h1>
-                <HighLightMarkdown>{ content }</HighLightMarkdown>
+                <Markdown
+                    options={{
+                        overrides: {
+                            pre: {
+                                component: CodeBlock,
+                            },
+                        },
+                    }}
+                >
+                    { content }
+                </Markdown>
                 <div className={postStyles.share}>
                     Comparte!
                     <a 

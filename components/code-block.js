@@ -5,15 +5,18 @@ import { useEffect } from 'react';
 import Prism from 'prismjs';
 
 export default function CodeBlock({ children }) {
+    const language = children.props.className.replace('lang-', '');
     useEffect(() => {
         Prism.highlightAll();
     });
 
     return(
-        <pre className="  language-javascript">
-            <code className="  language-javascript">
-                { children.props.children }
-            </code>
-        </pre>
+        <code-block data-lang={language}>
+            <pre className={`  language-${language}`}>
+                <code className={`  language-${language}`}>
+                    { children.props.children }
+                </code>
+            </pre>
+        </code-block>
     );
 }
