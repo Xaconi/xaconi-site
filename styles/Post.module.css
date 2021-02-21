@@ -22,7 +22,4 @@
 
 .post pre {
     width: 100%;
-    padding: 20px 30px;
-    background-color: var(--color-dark-grey);
-    border-radius: 5px;
 }

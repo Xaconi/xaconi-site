@@ -11,6 +11,7 @@
     "front-matter": "^4.0.2",
     "markdown-to-jsx": "^7.1.1",
     "next": "10.0.6",
+    "prismjs": "^1.23.0",
     "react": "17.0.1",
     "react-dom": "17.0.1"
   }
