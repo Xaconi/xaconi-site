@@ -39,7 +39,7 @@ export default function CodeBlock({ children }) {
                     { children.props.children }
                 </code>
             </pre>
-            <button onClick={copyCode}>
+            <button aria-label="Copiar código" onClick={copyCode}>
                 <svg className={showSvg} id="Capa_1" x="0px" y="0px" viewBox="0 0 488.3 488.3">
                     <g>
                         <g>
