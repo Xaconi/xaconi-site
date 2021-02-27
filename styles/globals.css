@@ -39,3 +39,8 @@ p a {
 h1 {
   font-size: 28px;
 }
+
+/* Displays */
+.displayNone {
+  display: none;
+}

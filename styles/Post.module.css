@@ -44,3 +44,26 @@
     background-color : var(--color-javascript);
     color: var(--color-dark-grey);
 }
+
+.post code-block button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border: none;
+    border-radius: 0;
+    padding: 4px 10px;
+    cursor: pointer;
+    background-color: var(--color-light-grey);
+    border-top-left-radius: 5px;
+}
+
+.post code-block button svg {
+    width: 20px;
+}
+
+.post code-block button span {
+    font-family: monospace;
+    font-size: 14px;
+    line-height: 20px;
+    padding-bottom: 5px;
+}
