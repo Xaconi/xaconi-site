@@ -20,13 +20,13 @@ export default function Article({title, image, content, link}) {
     return(
         <section className={postStyles.post}>
             <article>
-                <img 
+                {image && <img 
                     alt={title}
                     className={postStyles.img}
                     height="260" 
                     src={ image } 
                     width="640" 
-                />
+                /> }
                 <h1>{ title }</h1>
                 <Markdown>{ content }</Markdown>
                 <div className={postStyles.share}>

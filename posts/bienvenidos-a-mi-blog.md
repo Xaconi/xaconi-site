@@ -1,7 +1,6 @@
 ---
 title: Bienvenidos a mi blog!
-date: '2021-02-24'
-image: '/js_image.png'
+date: '2021-02-27'
 description: Bienvenida a mi blog y explicación del tech-stack que lleva.
 tags:
 - blog

@@ -32,7 +32,7 @@ export default function Home({ lastPost }) {
 				<h1>Último post</h1>
 				<Article
 					title={ lastPost.title }
-					image={ lastPost.image }
+					image={ lastPost.image ? lastPost.image : null }
 					content={ lastPost.content }
 					link={ lastPost.link }
 				>
