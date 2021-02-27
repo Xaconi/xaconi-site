@@ -8,9 +8,9 @@ TODO things to do on my blog
 - [x] Post page
 - [x] Posts page
 - [x] About me page
+- [x] First post!
 - [ ] Add OG data
 - [ ] Publish on public domain
-- [ ] First post!
 
 #### Article Ideas ####
 
