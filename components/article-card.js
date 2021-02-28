@@ -4,7 +4,10 @@ import stylesPosts from '../styles/Posts.module.css';
 // NextJS Core
 import Link from 'next/link';
 
-export default function ArticleCard({ title, image, description, link }) {
+// Components
+import DateParser from '../components/date-parser';
+
+export default function ArticleCard({ title, image, description, link, date }) {
     return(
         <Link href={`/${link}`}>
             <a title={title}>
@@ -18,6 +21,9 @@ export default function ArticleCard({ title, image, description, link }) {
                     />}
                     <div className={stylesPosts.articleInfo}>
                         <h2>{ title }</h2>
+                        <span>
+                            <DateParser date={date}></DateParser>
+                        </span>
                         <p>{ description }</p>
                     </div>
                 </article>

@@ -6,11 +6,12 @@ import Markdown from 'markdown-to-jsx';
 
 // Components
 import CodeBlock from '../components/code-block';
+import DateParser from '../components/date-parser';
 
 // Styles
 import postStyles from '../styles/Post.module.css';
 
-export default function Article({title, image, content, link}) {
+export default function Article({title, image, content, link, date}) {
 
     const [url, setURL] = useState(0);
     useEffect(() => {
@@ -28,6 +29,9 @@ export default function Article({title, image, content, link}) {
                     width="640" 
                 /> }
                 <h1>{ title }</h1>
+                <span>
+                    <DateParser date={date}></DateParser>
+                </span>
                 <Markdown
                     options={{
                         overrides: {
