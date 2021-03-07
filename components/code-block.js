@@ -23,7 +23,7 @@ export default function CodeBlock({ children }) {
         handleCopy(code);
 
         setShowSvg('displayNone');
-        setButtonText('//Copiado!');
+        setButtonText('✔');
 
         setTimeout(function() {
             setShowSvg('showSvg');
