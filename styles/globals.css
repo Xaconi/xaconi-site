@@ -6,6 +6,11 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+p {
+  font-size: 16px;
+  line-height: 24px;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -13,13 +18,6 @@ a {
 
 p a {
   text-decoration: underline;
-}
-
-code {
-  padding: 2px 5px;
-  background-color: var(--color-dark-grey);
-  color: white;
-  border-radius: 5px;
 }
 
 * {
@@ -34,6 +32,9 @@ code {
 	--color-light-grey: #e0e0e0;
 	--color-white: white;
 
+  /* Languages Colors */
+  --color-javascript : #F7DF1E;
+
 	/* Sizes */
 	--size-screen-max: 1440px;
   --size-post-max: 1024px;
@@ -42,4 +43,9 @@ code {
 /* Titles */
 h1 {
   font-size: 28px;
+}
+
+/* Displays */
+.displayNone {
+  display: none;
 }

@@ -26,6 +26,9 @@ export function getPostBySlug(slug) {
         markdownParsedContent = fm(fileContents);
 
         markdownParsedContent.attributes.link = filenameFound[0].replace('.md', '');
+
+        if(typeof markdownParsedContent.attributes.image == 'undefined')
+		    markdownParsedContent.attributes.image = null;
     }
 
     return markdownParsedContent;
@@ -45,6 +48,9 @@ export function getAllPosts() {
             const fileContentsParsed = fm(fileContents);
 
             fileContentsParsed.attributes.link = filename.replace('.md', '');
+
+            if(typeof fileContentsParsed.attributes.image == 'undefined')
+		        fileContentsParsed.attributes.image = null;
 
             posts.push(fileContentsParsed);
         })

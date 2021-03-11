@@ -46,6 +46,7 @@ export default function Posts({ posts }) {
 								image={post.attributes.image}
 								link={post.attributes.link}
 								key={post.attributes.link}
+								date={post.attributes.date}
 							/>
 						)
 					})}

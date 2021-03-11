@@ -14,6 +14,7 @@
     width: 30%;
     margin-right: 30px;
     object-fit: cover;
+    max-height: 130px;
 }
 
 .articleInfo {
@@ -24,6 +25,12 @@
 
 .articleInfo h2 {
     margin: 0;
+    margin-bottom: 5px;
+}
+
+.articleInfo span {
+    font-size: 14px;
+    font-style: italic;
 }
 
 .articleInfo p {

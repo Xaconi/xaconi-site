@@ -44,7 +44,13 @@ export default function Footer() {
                 rel="noopener noreferrer"
             >
                 Powered by
-                <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
+                <img 
+                    alt="Vercel Logo" 
+                    className={styles.logo} 
+                    height="16"
+                    src="/vercel.svg" 
+                    width="71"
+                />
             </a>
 
         </footer>

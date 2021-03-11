@@ -38,10 +38,11 @@ export default function Home({ lastPost }) {
 			<section className={styles.section}>
 				<h1>Último post</h1>
 				<Article
-					title={ lastPost.title }
-					image={ lastPost.image }
 					content={ lastPost.content }
+					date={ lastPost.date }
+					image={ lastPost.image ? lastPost.image : null }
 					link={ lastPost.link }
+					title={ lastPost.title }
 				>
 				</Article>
 			</section>
@@ -57,11 +58,12 @@ export async function getStaticProps() {
 	return {
 	  	props: {
 			lastPost : {
-				title : lastPost.attributes.title,
+				content : lastPost.body,
+				date : lastPost.attributes.date,
 				description : lastPost.attributes.description,
 				image : lastPost.attributes.image,
-				content : lastPost.body,
-				link : lastPost.attributes.link
+				link : lastPost.attributes.link,
+				title : lastPost.attributes.title,
 			}
 	  	},
 	}

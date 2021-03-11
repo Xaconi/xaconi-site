@@ -33,10 +33,11 @@ export default function Post({ postContent }) {
             {postContent.title != '' ?
                 <section className={styles.section}>
                     <Article
-                        title={ postContent.title }
-                        image={ postContent.image }
                         content={ postContent.content }
+                        date={ postContent.date }
+                        image={ postContent.image }
                         link={ postContent.link }
+                        title={ postContent.title }
                     >
                     </Article>
                 </section>
@@ -70,14 +71,14 @@ export async function getServerSideProps({ params, res }) {
         return{
             props : {
                 postContent : {
-                    title : post.attributes.title,
+                    content : post.body,
+                    date: post.attributes.date,
                     description : post.attributes.description,
                     image : post.attributes.image,
-                    content : post.body,
-                    link : post.attributes.link
+                    link : post.attributes.link,
+                    title : post.attributes.title,
                 }
             }
         };
     }
-    
 }

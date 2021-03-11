@@ -22,7 +22,55 @@
 
 .post pre {
     width: 100%;
-    padding: 20px 30px;
-    background-color: var(--color-dark-grey);
+}
+
+.post code-block {
+    position: relative;
+    display: block;
+}
+
+.post code::after {
+    content: attr(data-lang);
+    position: absolute;
+    top: -14px;
+    right: 12px;
+    background-color: yellow;
+    padding: 4px 10px;
     border-radius: 5px;
+    font-family: monospace;
+}
+
+.post code[data-lang='javascript']::after {
+    background-color : var(--color-javascript);
+    color: var(--color-dark-grey);
+}
+
+.post code-block button {
+    position: absolute;
+    bottom: 0;
+    right: 30px;
+    border: none;
+    border-radius: 0;
+    padding: 4px 10px;
+    cursor: pointer;
+    background-color: var(--color-light-grey);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.post code-block:hover button {
+    opacity: 1;
+}
+
+.post code-block button svg {
+    width: 20px;
+}
+
+.post code-block button span {
+    font-family: monospace;
+    font-size: 24px;
+    line-height: 26px;
+    padding-bottom: 5px;
 }

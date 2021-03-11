@@ -1,11 +1,12 @@
-// NextJS Core
-import Image from 'next/image';
-
 // React
 import { useState, useEffect } from 'react';
 
 // Libs
 import Markdown from 'markdown-to-jsx';
+
+// Components
+import CodeBlock from '../components/code-block';
+import DateParser from '../components/date-parser';
 
 // Styles
 import postStyles from '../styles/Post.module.css';
@@ -13,22 +14,35 @@ import postStyles from '../styles/Post.module.css';
 // Hooks
 import useGetDomain from '../hooks/useGetDomain';
 
-export default function Article({title, image, content, link}) {
+export default function Article({title, image, content, link, date}) {
 
     const domain = useGetDomain();
 
     return(
         <section className={postStyles.post}>
             <article>
-                <img 
+                {image && <img 
                     alt={title}
                     className={postStyles.img}
                     height="260" 
                     src={ image } 
                     width="640" 
-                />
+                /> }
                 <h1>{ title }</h1>
-                <Markdown>{ content }</Markdown>
+                <span>
+                    <DateParser date={date}></DateParser>
+                </span>
+                <Markdown
+                    options={{
+                        overrides: {
+                            pre: {
+                                component: CodeBlock,
+                            },
+                        },
+                    }}
+                >
+                    { content }
+                </Markdown>
                 <div className={postStyles.share}>
                     Comparte!
                     <a 
