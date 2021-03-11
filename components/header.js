@@ -50,7 +50,7 @@ export default function Header() {
                 >
                     <img 
                         alt="GitHub de @Xaconi"
-                        src="/github_logo.png" 
+                        src="/github-logo.png" 
                         width="24" 
                         height="24" />
                 </a>
