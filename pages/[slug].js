@@ -1,25 +1,32 @@
 // Styles
 import styles from '../styles/Home.module.css'
 
-// NextJS Core
-import Head from 'next/head';
-
 // Components
 import Article from '../components/article';
+import CustomHead from '../components/custom-head';
 import Header from '../components/header';
 import Footer from '../components/footer';
 
 // Services
 import { getPostBySlug } from '../services/postsService';
 
+// Hooks
+import useGetDomain from '../hooks/useGetDomain';
+
 export default function Post({ postContent }) {
+
+    const domain = useGetDomain();
+
     return (
         <div className={styles.container}>
-			<Head>
-				<title>Xaconi.dev 👨‍💻 | {postContent.title}</title>
-                <meta name="description" content={postContent.description}></meta>
-				<link rel="icon" href="/favicon.ico" />
-			</Head>
+			<CustomHead
+                title={ postContent.title }
+                description={ postContent.description }
+                image= { `${domain}/${postContent.image}` }
+                link={ `${domain}/${postContent.link}` }
+                type="article"
+            >
+            </CustomHead>
 
 			<Header />
 

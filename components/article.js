@@ -10,12 +10,12 @@ import Markdown from 'markdown-to-jsx';
 // Styles
 import postStyles from '../styles/Post.module.css';
 
+// Hooks
+import useGetDomain from '../hooks/useGetDomain';
+
 export default function Article({title, image, content, link}) {
 
-    const [url, setURL] = useState(0);
-    useEffect(() => {
-        setURL(window.location.hostname);
-    });
+    const domain = useGetDomain();
 
     return(
         <section className={postStyles.post}>
@@ -32,7 +32,7 @@ export default function Article({title, image, content, link}) {
                 <div className={postStyles.share}>
                     Comparte!
                     <a 
-                        href={`https://twitter.com/intent/tweet?text=${title}&url=${url}/${link}`} 
+                        href={`https://twitter.com/intent/tweet?text=${title}&url=${domain}/${link}`} 
                         rel="nofollow noopener noreferrer"
                         target="_blank"
                     >
