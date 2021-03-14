@@ -23,7 +23,7 @@ export default function CustomHead({ title, description, image, link, type, doma
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:creator" content="@xaconi" />
             <meta name="twitter:domain" content={ domain } />
-            <meta name="twitter:image" content={ image } />
+            <meta name="twitter:image:src" content={ image } />
             <meta name="twitter:site" content="@xaconi" />
 
             {/* MANIFEST */}

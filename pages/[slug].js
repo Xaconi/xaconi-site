@@ -22,7 +22,7 @@ export default function Post({ postContent }) {
 			<CustomHead
                 title={ postContent.title }
                 description={ postContent.description }
-                image= { useGetDomain(`/api/social-image/${postContent.link}`) }
+                image= { useGetDomain(`/api/social-image/${postContent.link}.jpg`) }
                 link={ useGetDomain(`/${postContent.link}`) }
                 type="article"
                 domain= { useGetDomain('') }

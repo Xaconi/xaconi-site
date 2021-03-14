@@ -9,7 +9,7 @@ import { getPostBySlug } from '../../../services/postsService';
 import chromium from 'chrome-aws-lambda';
 
 export default async (req, res) => {
-    const postSlug = req.query.post;
+    const postSlug = req.query.post.replace('.jpg', '');
     const post = await getPostBySlug(postSlug);
 
     if(post.attributes.image != null) {
