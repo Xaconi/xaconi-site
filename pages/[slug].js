@@ -10,22 +10,16 @@ import Footer from '../components/footer';
 // Services
 import { getPostBySlug } from '../services/postsService';
 
-// Hooks
-import useGetDomain from '../hooks/useGetDomain';
-
 export default function Post({ postContent }) {
-
-    const domain = useGetDomain();
 
     return (
         <div className={styles.container}>
 			<CustomHead
                 title={ postContent.title }
                 description={ postContent.description }
-                image= { useGetDomain(`/api/social-image/${postContent.link}.jpg`) }
-                link={ useGetDomain(`/${postContent.link}`) }
+                image= { `/api/social-image/${postContent.link}.jpg` }
+                link={ `/${postContent.link}` }
                 type="article"
-                domain= { useGetDomain('') }
             >
             </CustomHead>
 

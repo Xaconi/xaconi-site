@@ -14,12 +14,7 @@ import CustomHead from '../components/custom-head';
 // Services
 import { getAllPosts } from '../services/postsService';
 
-// Hooks
-import useGetDomain from '../hooks/useGetDomain';
-
 export default function Posts({ posts }) {
-
-	const domain = useGetDomain();
 
     return(
         <div className={styles.container}>
@@ -28,9 +23,8 @@ export default function Posts({ posts }) {
                 title="Xaconi.dev 👨‍💻 | Posts"
                 description="Aquí tienes la lista de posts de mi Blog. Artículos sobre FrontEnd (Angular, React, Vue, etc.), BackEnd (JavaScript, PHP, etc.) y buenas prácticas. Un poco de todo!"
                 image="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>"
-                link={ `${domain}/posts` }
+                link={ `/posts` }
                 type="web"
-				domain= { useGetDomain('') }
             >
             </CustomHead>
 

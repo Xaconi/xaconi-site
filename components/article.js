@@ -11,12 +11,10 @@ import DateParser from '../components/date-parser';
 // Styles
 import postStyles from '../styles/Post.module.css';
 
-// Hooks
-import useGetDomain from '../hooks/useGetDomain';
+// Services
+import getBaseURL from '../services/urlService';
 
 export default function Article({title, image, content, link, date}) {
-
-    const domain = useGetDomain();
 
     return(
         <section className={postStyles.post}>
@@ -46,7 +44,7 @@ export default function Article({title, image, content, link, date}) {
                 <div className={postStyles.share}>
                     Comparte!
                     <a 
-                        href={`https://twitter.com/intent/tweet?text=${title}&url=${ useGetDomain(`/${link}`) }`} 
+                        href={`https://twitter.com/intent/tweet?text=${title}&url=${ getBaseURL(`/${link}`) }`} 
                         rel="nofollow noopener noreferrer"
                         target="_blank"
                     >
