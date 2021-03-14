@@ -22,9 +22,10 @@ export default function Post({ postContent }) {
 			<CustomHead
                 title={ postContent.title }
                 description={ postContent.description }
-                image= { `${domain}/${postContent.image}` }
-                link={ `${domain}/${postContent.link}` }
+                image= { useGetDomain(`/api/social-image/${postContent.link}`) }
+                link={ useGetDomain(`/${postContent.link}`) }
                 type="article"
+                domain= { useGetDomain('') }
             >
             </CustomHead>
 
