@@ -9,17 +9,19 @@ import Footer from '../components/footer';
 
 // Services
 import { getPostBySlug } from '../services/postsService';
+import getBaseURL from '../services/urlService';
 
-export default function Post({ postContent }) {
+export default function Post({ postContent, baseURL }) {
 
     return (
         <div className={styles.container}>
 			<CustomHead
                 title={ postContent.title }
                 description={ postContent.description }
-                image= { `/api/social-image/${postContent.link}.jpg` }
-                link={ `/${postContent.link}` }
+                image= { `${baseURL}/api/social-image/${postContent.link}.jpg` }
+                link={ `${baseURL}/${postContent.link}` }
                 type="article"
+                domain={ `${baseURL}` }
             >
             </CustomHead>
 
@@ -31,7 +33,7 @@ export default function Post({ postContent }) {
                         content={ postContent.content }
                         date={ postContent.date }
                         image={ postContent.image }
-                        link={ postContent.link }
+                        link={ `${baseURL}/${postContent.link}` }
                         title={ postContent.title }
                     >
                     </Article>
@@ -49,6 +51,7 @@ export default function Post({ postContent }) {
 
 export async function getServerSideProps({ params, res }) {
     const post = getPostBySlug(params.slug);
+    const baseURL = getBaseURL('');
 
     if(post === null) {
         res.statusCode = 404;
@@ -59,7 +62,8 @@ export async function getServerSideProps({ params, res }) {
                     description : '',
                     image : '',
                     content : ''
-                }
+                },
+                baseURL
             }
         };    
     } else {
@@ -72,7 +76,8 @@ export async function getServerSideProps({ params, res }) {
                     image : post.attributes.image,
                     link : post.attributes.link,
                     title : post.attributes.title,
-                }
+                },
+                baseURL
             }
         };
     }

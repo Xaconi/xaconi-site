@@ -9,8 +9,9 @@ import CustomHead from '../components/custom-head';
 
 // Services
 import getLastPost from '../services/postsService';
+import getBaseURL from '../services/urlService';
 
-export default function Home({ lastPost }) {
+export default function Home({ lastPost, baseURL }) {
 
 	return (
 		<div className={styles.container}>
@@ -18,8 +19,9 @@ export default function Home({ lastPost }) {
                 title="Xaconi.dev 👨‍💻"
                 description="Posts sobre desarrollo web, FrontEnd (Angular, React, Vue, etc.), BackEnd (JavaScript, PHP, etc.) y buenas prácticas."
                 image="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>"
-                link={ '' }
+                link={ baseURL }
                 type="web"
+				domain={ baseURL }
             >
             </CustomHead>
 
@@ -49,6 +51,7 @@ export default function Home({ lastPost }) {
 
 export async function getStaticProps() {
 	const lastPost = getLastPost();
+	const baseURL = getBaseURL('');
 
 	return {
 	  	props: {
@@ -59,7 +62,8 @@ export async function getStaticProps() {
 				image : lastPost.attributes.image,
 				link : lastPost.attributes.link,
 				title : lastPost.attributes.title,
-			}
+			},
+			baseURL
 	  	},
 	}
 }

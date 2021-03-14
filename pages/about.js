@@ -7,7 +7,10 @@ import Header from '../components/header';
 import Footer from '../components/footer';
 import CustomHead from '../components/custom-head';
 
-export default function About() {
+// Services
+import getBaseURL from '../services/urlService';
+
+export default function About({ baseURL }) {
 
     return(
         <>
@@ -16,8 +19,9 @@ export default function About() {
                     title="Xaconi.dev 👨‍💻 | Sobre mí"
                     description="Acerca de mí, quién soy, a qué me dedico, etc."
                     image="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>"
-                    link={ '/about' }
+                    link={ `${baseURL}/about` }
                     type="web"
+                    domain={ `${baseURL}` }
                 >
                 </CustomHead>
 
@@ -45,4 +49,14 @@ export default function About() {
             </div>
         </>
     )
+}
+
+export async function getStaticProps() {
+	const baseURL = getBaseURL('');
+
+	return {
+	  	props: {
+			baseURL
+	  	},
+	}
 }
