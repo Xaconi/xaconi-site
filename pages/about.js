@@ -12,6 +12,8 @@ import useGetDomain from '../hooks/useGetDomain';
 
 export default function About() {
 
+    const domain = useGetDomain();
+
     return(
         <>
             <div className={styles.container}>
@@ -19,9 +21,8 @@ export default function About() {
                     title="Xaconi.dev 👨‍💻 | Sobre mí"
                     description="Acerca de mí, quién soy, a qué me dedico, etc."
                     image="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>"
-                    link={ useGetDomain('/about') }
+                    link={ `${domain}/about` }
                     type="web"
-                    domain={ useGetDomain('') }
                 >
                 </CustomHead>
 
