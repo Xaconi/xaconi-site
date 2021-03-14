@@ -15,6 +15,7 @@ export default function CustomHead({ title, description, image, link, type, doma
             <meta property="og:title" content={ title } />
             <meta property="og:description" content={ description } />
             <meta property="og:image" content={ image } />
+            <meta property="og:image:secure_url" content={ image } />
             <meta property="og:type" content={ type } />
             <meta property="og:locale" content="es_ES" />
             <meta property="og:site_name" content="xaconi.dev" />
