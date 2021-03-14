@@ -1,11 +1,6 @@
 import { useState, useEffect } from 'react';
 
 export default function useGetDomain(path) {
-    const [domain, setDomain] = useState('');
-
-    useEffect(() => {
-        setDomain(`https://${window.location.hostname}${path}`);
-    });
-
-    return domain;
+    const baseURL = process.env.BASE_URL ? `https://${process.env.BASE_URL}` : "http://localhost:3000";
+    return baseURL + path;
 }
