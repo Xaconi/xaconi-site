@@ -46,7 +46,7 @@ export default function Article({title, image, content, link, date}) {
                 <div className={postStyles.share}>
                     Comparte!
                     <a 
-                        href={`https://twitter.com/intent/tweet?text=${title}&url=${domain}/${link}`} 
+                        href={`https://twitter.com/intent/tweet?text=${title}&url=${ useGetDomain(`/${link}`) }`} 
                         rel="nofollow noopener noreferrer"
                         target="_blank"
                     >
