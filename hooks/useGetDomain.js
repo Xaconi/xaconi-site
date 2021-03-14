@@ -4,7 +4,7 @@ export default function useGetDomain(path) {
     const [domain, setDomain] = useState('');
 
     useEffect(() => {
-        setDomain(`${window.location.hostname}${path}`);
+        setDomain(`https://${window.location.hostname}${path}`);
     });
 
     return domain;
