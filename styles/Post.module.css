@@ -74,3 +74,9 @@
     line-height: 26px;
     padding-bottom: 5px;
 }
+
+@media (hover:none), (hover:on-demand){ 
+    .post code-block button {
+        opacity: 1 !important;
+    }
+}
