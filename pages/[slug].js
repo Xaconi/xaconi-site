@@ -6,6 +6,7 @@ import Article from '../components/article';
 import CustomHead from '../components/custom-head';
 import Header from '../components/header';
 import Footer from '../components/footer';
+import Page404 from '../components/404';
 
 // Services
 import { getPostBySlug } from '../services/postsService';
@@ -39,9 +40,7 @@ export default function Post({ postContent, baseURL }) {
                     </Article>
                 </section>
                 :
-                <>
-                    404
-                </>
+                <Page404 />
             }
 
 			<Footer />

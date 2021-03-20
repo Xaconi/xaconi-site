@@ -20,6 +20,10 @@ p a {
   text-decoration: underline;
 }
 
+img {
+  max-width: 100%;
+}
+
 * {
   box-sizing: border-box;
   outline: 0;
