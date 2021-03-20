@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 
 // Services
-import { getPostBySlug } from '../../../services/postsService';
+import { getPostBySlug } from '../../services/postsService';
 
 // Libs
 import chromium from 'chrome-aws-lambda';
