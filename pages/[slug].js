@@ -16,34 +16,37 @@ export default function Post({ postContent, baseURL }) {
 
     return (
         <div className={styles.container}>
-			<CustomHead
-                title={ postContent.title }
-                description={ postContent.description }
-                image= { `${baseURL}/api/social-image/${postContent.link}.jpg` }
-                link={ `${baseURL}/${postContent.link}` }
-                type="article"
-                domain={ `${baseURL}` }
-            >
-            </CustomHead>
-
-			<Header />
 
             {postContent.title != '' ?
-                <section className={styles.section}>
-                    <Article
-                        content={ postContent.content }
-                        date={ postContent.date }
-                        image={ postContent.image }
-                        link={ `${baseURL}/${postContent.link}` }
+                <>
+                    <CustomHead
                         title={ postContent.title }
+                        description={ postContent.description }
+                        image= { `${baseURL}/api/social-image/${postContent.link}.jpg` }
+                        link={ `${baseURL}/${postContent.link}` }
+                        type="article"
+                        domain={ `${baseURL}` }
                     >
-                    </Article>
-                </section>
+                    </CustomHead>
+
+                    <Header />
+                    
+                    <section className={styles.section}>
+                        <Article
+                            content={ postContent.content }
+                            date={ postContent.date }
+                            image={ postContent.image }
+                            link={ `${baseURL}/${postContent.link}` }
+                            title={ postContent.title }
+                        >
+                        </Article>
+                    </section>
+
+                    <Footer />
+                </>
                 :
                 <Page404 />
             }
-
-			<Footer />
 		</div>
     );
 }
