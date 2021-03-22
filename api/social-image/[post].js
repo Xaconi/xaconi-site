@@ -8,9 +8,6 @@ import { getPostBySlug } from '../../services/postsService';
 // Libs
 import chromium from 'chrome-aws-lambda';
 
-// Components
-import DateParser from '../../components/date-parser';
-
 export default async (req, res) => {
     const postSlug = req.query.post.replace('.jpg', '');
     const post = await getPostBySlug(postSlug);
