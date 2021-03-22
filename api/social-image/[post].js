@@ -75,10 +75,10 @@ export default async (req, res) => {
                     box-sizing: border-box;
                     display : flex;
                     flex-direction : column;
-                    height : calc(100% - 40px);
-                    margin : 20px;
+                    height : calc(100% - 80px);
+                    margin : 40px;
                     padding : 20px;
-                    width : calc(100% - 40px);
+                    width : calc(100% - 80px);
                     position: relative;
                     background-color: white;
                 }
