@@ -14,10 +14,14 @@ export default function ArticleCard({ title, image, description, link, date }) {
                 <article className={stylesPosts.article}>
                     {image ? <img 
                         alt={ title }
+                        height="130"
                         src={ image } 
+                        width="289"
                     /> : <img 
                         alt={ title }
+                        height="130"
                         src={ 'dummy-image.png' } 
+                        width="289"
                     />}
                     <div className={stylesPosts.articleInfo}>
                         <h2>{ title }</h2>
