@@ -1,7 +1,7 @@
 // NextJS Core
 import Head from 'next/head';
 
-export default function CustomHead({ title, description, image, link, type, domain}) {
+export default function CustomHead({ title, description, image, link, type, domain, date}) {
 
     return(
         <Head>
@@ -29,6 +29,22 @@ export default function CustomHead({ title, description, image, link, type, doma
 
             {/* MANIFEST */}
             <link rel="manifest" href="/manifest.json"></link>
+
+            {/* LD+JSON */}
+            {date != null ?
+                <script type="application/ld+json">
+                {`
+                    "@context":"http://schema.org",
+                    "@type":"NewsArticle",
+                    "headline":"${title}",
+                    "image":["${image}"],
+                    "datePublished":"${date}"
+                `}
+                </script>
+                :
+                <></>
+            }
+            
         </Head>
     );
 }

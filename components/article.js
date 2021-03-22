@@ -18,7 +18,7 @@ export default function Article({title, image, content, link, date}) {
 
     return(
         <section className={postStyles.post}>
-            <article>
+            <article itemScope itemType="http://schema.org/Article">
                 {image && <img 
                     alt={title}
                     className={postStyles.img}
@@ -26,11 +26,15 @@ export default function Article({title, image, content, link, date}) {
                     src={ image } 
                     width="640" 
                 /> }
-                <h1>{ title }</h1>
-                <span>
+
+                <h1 itemProp="name">{ title }</h1>
+
+                <span itemProp="datePublished" dateTime={date}>
                     <DateParser date={date}></DateParser>
                 </span>
+
                 <Markdown
+                    itemProp="articleBody"
                     options={{
                         overrides: {
                             pre: {

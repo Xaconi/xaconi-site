@@ -26,6 +26,7 @@ export default function Post({ postContent, baseURL }) {
                         link={ `${baseURL}/${postContent.link}` }
                         type="article"
                         domain={ `${baseURL}` }
+                        date={ `${postContent.date}` }
                     >
                     </CustomHead>
 
