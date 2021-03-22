@@ -33,13 +33,14 @@ export default function CustomHead({ title, description, image, link, type, doma
             {/* LD+JSON */}
             {date != null ?
                 <script type="application/ld+json">
-                {`
+                {`{
                     "@context":"http://schema.org",
                     "@type":"NewsArticle",
                     "headline":"${title}",
                     "image":["${image}"],
                     "datePublished":"${date}"
-                `}
+                    "author":"Nicolás Joel Giacconi Fernández"
+                }`}
                 </script>
                 :
                 <></>
