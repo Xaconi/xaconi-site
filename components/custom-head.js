@@ -38,7 +38,7 @@ export default function CustomHead({ title, description, image, link, type, doma
                     "@type":"NewsArticle",
                     "headline":"${title}",
                     "image":["${image}"],
-                    "datePublished":"${date}"
+                    "datePublished":"${date}",
                     "author":"Nicolás Joel Giacconi Fernández"
                 }`}
                 </script>
