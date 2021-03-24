@@ -1,38 +1,54 @@
-// NextJS Core
-import Image from 'next/image';
-
 // React
 import { useState, useEffect } from 'react';
 
 // Libs
 import Markdown from 'markdown-to-jsx';
 
+// Components
+import CodeBlock from '../components/code-block';
+import DateParser from '../components/date-parser';
+
 // Styles
 import postStyles from '../styles/Post.module.css';
 
-export default function Article({title, image, content, link}) {
+// Services
+import getBaseURL from '../services/urlService';
 
-    const [url, setURL] = useState(0);
-    useEffect(() => {
-        setURL(window.location.hostname);
-    });
+export default function Article({title, image, content, link, date}) {
 
     return(
         <section className={postStyles.post}>
-            <article>
-                <img 
+            <article itemScope itemType="http://schema.org/Article">
+                {image && <img 
                     alt={title}
                     className={postStyles.img}
                     height="260" 
                     src={ image } 
                     width="640" 
-                />
-                <h1>{ title }</h1>
-                <Markdown>{ content }</Markdown>
+                /> }
+
+                <h1 itemProp="name">{ title }</h1>
+
+                <span itemProp="datePublished" dateTime={date}>
+                    <DateParser date={date}></DateParser>
+                </span>
+
+                <Markdown
+                    itemProp="articleBody"
+                    options={{
+                        overrides: {
+                            pre: {
+                                component: CodeBlock,
+                            },
+                        },
+                    }}
+                >
+                    { content }
+                </Markdown>
                 <div className={postStyles.share}>
                     Comparte!
                     <a 
-                        href={`https://twitter.com/intent/tweet?text=${title}&url=${url}/${link}`} 
+                        href={`https://twitter.com/intent/tweet?text=${title}&url=${ link }`} 
                         rel="nofollow noopener noreferrer"
                         target="_blank"
                     >

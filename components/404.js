@@ -1,0 +1,33 @@
+// Styles
+import styles from '../styles/404.module.css';
+
+// Components
+import CustomHead from '../components/custom-head';
+import Header from '../components/header';
+import Footer from '../components/footer';
+
+export default function Page404() {
+    return(
+        <>
+            <CustomHead
+                title="404 - Página no encontrada"
+                description="404 - Página no encontrada"
+                image="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>"
+                link=" "
+                type="article"
+                domain=" "
+            >
+            </CustomHead>
+
+            <Header />
+
+            <section className={styles.section}>
+                <h1>404 - Página no encontrada</h1>
+                <img alt="Página no encontrada" src="/let_it_burn.gif" />
+                <h3 className={styles.h3}>you not supposed to be here...</h3>
+            </section>
+
+            <Footer />
+        </>
+    );
+}

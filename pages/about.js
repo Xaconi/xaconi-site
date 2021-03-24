@@ -2,22 +2,28 @@
 import styles from '../styles/Home.module.css';
 import stylesAbout from '../styles/About.module.css';
 
-// NextJS Core
-import Head from 'next/head';
-
 // Components
 import Header from '../components/header';
 import Footer from '../components/footer';
+import CustomHead from '../components/custom-head';
 
-export default function About() {
+// Services
+import getBaseURL from '../services/urlService';
+
+export default function About({ baseURL }) {
+
     return(
         <>
             <div className={styles.container}>
-                <Head>
-                    <title>Xaconi.dev 👨‍💻 | Sobre mí</title>
-                    <meta name="description" content="Acerca de mí, quién soy, a qué me dedico, etc."></meta>
-                    <link rel="icon" href="/favicon.ico" />
-                </Head>
+                <CustomHead
+                    title="Xaconi.dev 👨‍💻 | Sobre mí"
+                    description="Acerca de mí, quién soy, a qué me dedico, etc."
+                    image="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>"
+                    link={ `${baseURL}/about` }
+                    type="web"
+                    domain={ `${baseURL}` }
+                >
+                </CustomHead>
 
                 <Header />
 
@@ -43,4 +49,14 @@ export default function About() {
             </div>
         </>
     )
+}
+
+export async function getStaticProps() {
+	const baseURL = getBaseURL('');
+
+	return {
+	  	props: {
+			baseURL
+	  	},
+	}
 }

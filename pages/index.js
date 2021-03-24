@@ -1,25 +1,29 @@
 // Styles
 import styles from '../styles/Home.module.css'
 
-// NextJS Core
-import Head from 'next/head';
-
 // Components
 import Article from '../components/article';
 import Header from '../components/header';
 import Footer from '../components/footer';
+import CustomHead from '../components/custom-head';
 
 // Services
 import getLastPost from '../services/postsService';
+import getBaseURL from '../services/urlService';
 
-export default function Home({ lastPost }) {
+export default function Home({ lastPost, baseURL }) {
+
 	return (
 		<div className={styles.container}>
-			<Head>
-				<title>Xaconi.dev 👨‍💻</title>
-				<meta name="description" content="Posts sobre desarrollo web, FrontEnd (Angular, React, Vue, etc.), BackEnd (JavaScript, PHP, etc.) y buenas prácticas."></meta>
-				<link rel="icon" href="/favicon.ico" />
-			</Head>
+			<CustomHead
+                title="Xaconi.dev 👨‍💻"
+                description="Posts sobre desarrollo web, FrontEnd (Angular, React, Vue, etc.), BackEnd (JavaScript, PHP, etc.) y buenas prácticas."
+                image="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>"
+                link={ baseURL }
+                type="web"
+				domain={ baseURL }
+            >
+            </CustomHead>
 
 			<Header />
 
@@ -31,10 +35,11 @@ export default function Home({ lastPost }) {
 			<section className={styles.section}>
 				<h1>Último post</h1>
 				<Article
-					title={ lastPost.title }
-					image={ lastPost.image }
 					content={ lastPost.content }
+					date={ lastPost.date }
+					image={ lastPost.image ? lastPost.image : null }
 					link={ lastPost.link }
+					title={ lastPost.title }
 				>
 				</Article>
 			</section>
@@ -46,16 +51,19 @@ export default function Home({ lastPost }) {
 
 export async function getStaticProps() {
 	const lastPost = getLastPost();
+	const baseURL = getBaseURL('');
 
 	return {
 	  	props: {
 			lastPost : {
-				title : lastPost.attributes.title,
+				content : lastPost.body,
+				date : lastPost.attributes.date,
 				description : lastPost.attributes.description,
 				image : lastPost.attributes.image,
-				content : lastPost.body,
-				link : lastPost.attributes.link
-			}
+				link : lastPost.attributes.link,
+				title : lastPost.attributes.title,
+			},
+			baseURL
 	  	},
 	}
 }
