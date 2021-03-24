@@ -9,11 +9,12 @@ TODO things to do on my blog
 - [x] Posts page
 - [x] About me page
 - [x] First post!
-- [ ] Add OG data
-- [ ] Publish on public domain
+- [x] Add OG data
+- [x] Publish on public domain
+All done!!! 🙌🙌🙌🎉🎉🎉
 
 #### Article Ideas ####
 
-* Simple date and time to read React component used on the blog
 * Dynamic OG images on post microbrowsers share
 * Dynamic code highlight component on post page
+* Simple date and time to read React component used on the blog
