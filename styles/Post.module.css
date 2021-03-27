@@ -3,6 +3,10 @@
     margin: 30px auto 30px auto;
 }
 
+.postCenter {
+    text-align: center;
+}
+
 .img {
     margin: 0 auto;
     display: block;
@@ -18,6 +22,21 @@
 .share a {
     display: block;
     margin-left: 10px;
+}
+
+.imageWrapper {
+    width: 100%;
+    text-align: center;
+}
+
+.imageWrapper img {
+    border: 2px solid black;
+}
+
+.imageWrapper span {
+    display: block;
+    font-style: italic;
+    font-size: 14px;
 }
 
 .post pre {

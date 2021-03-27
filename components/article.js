@@ -7,6 +7,7 @@ import Markdown from 'markdown-to-jsx';
 // Components
 import CodeBlock from '../components/code-block';
 import DateParser from '../components/date-parser';
+import PostImage from './post-image';
 
 // Styles
 import postStyles from '../styles/Post.module.css';
@@ -39,6 +40,15 @@ export default function Article({title, image, content, link, date}) {
                         overrides: {
                             pre: {
                                 component: CodeBlock,
+                            },
+                            p: props => {
+                                return props.children.some(child => child.type === "img") ? (
+                                    <p className={postStyles.imageWrapper}>
+                                        <PostImage {...props.children[0].props} />
+                                    </p>
+                                ) : (
+                                  <p {...props} />
+                                )
                             },
                         },
                     }}
