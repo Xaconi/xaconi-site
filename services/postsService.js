@@ -52,8 +52,6 @@ export function getAllPosts() {
             if(typeof fileContentsParsed.attributes.image == 'undefined')
 		        fileContentsParsed.attributes.image = null;
 
-            console.log(fileContentsParsed.attributes.active);
-
             if(fileContentsParsed.attributes.active != false)
                 posts.push(fileContentsParsed);
         })
