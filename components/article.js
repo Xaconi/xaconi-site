@@ -41,15 +41,7 @@ export default function Article({title, image, content, link, date}) {
                             pre: {
                                 component: CodeBlock,
                             },
-                            p: props => {
-                                return props.children.some(child => child.type === "img") ? (
-                                    <p className={postStyles.imageWrapper}>
-                                        <PostImage {...props.children[0].props} />
-                                    </p>
-                                ) : (
-                                  <p {...props} />
-                                )
-                            },
+                            img: PostImage
                         },
                     }}
                 >

@@ -30,10 +30,36 @@
 }
 
 .imageWrapper img {
-    border: 2px solid black;
+    border: 2px solid var(--color-dark-grey);
+    padding: 5px;
+    border-radius: 5px;
+    position: relative;
+    background-color: var(--color-white);
+    display: block;
+}
+
+.imageWrapper .imageOverlay {
+    margin-bottom: 10px;
+}
+
+.imageWrapper .imageOverlay::after {
+    content: " ";
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background-color: var(--color-dark-grey);
+    z-index: -1;
 }
 
 .imageWrapper span {
+    display: inline-block;
+    position: relative;
+}
+
+.imageWrapper .imageDescription {
     display: block;
     font-style: italic;
     font-size: 14px;
