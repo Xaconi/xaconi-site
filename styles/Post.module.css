@@ -24,6 +24,25 @@
     margin-left: 10px;
 }
 
+.externalLink {
+    background-color: var(--color-light-grey);
+    border-radius: 5px;
+    border: 1px solid var(--color-dark-grey);
+    padding: 1px 25px 1px 10px;
+    position: relative;
+}
+
+.externalLink::after {
+    content: '';
+    background-image: url('/externalLink.png');
+    background-size: 16px;
+    position: absolute;
+    top: 4px;
+    right: 3px;
+    width: 16px;
+    height: 16px;
+}
+
 .imageWrapper {
     width: 100%;
     text-align: center;
