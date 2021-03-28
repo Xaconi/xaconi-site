@@ -9,7 +9,7 @@ import Footer from '../components/footer';
 import Page404 from '../components/404';
 
 // Services
-import { getPostBySlug } from '../services/postsService';
+import { getAllPosts, getPostBySlug } from '../services/postsService';
 import getBaseURL from '../services/urlService';
 
 export default function Post({ postContent, baseURL }) {
@@ -52,7 +52,7 @@ export default function Post({ postContent, baseURL }) {
     );
 }
 
-export async function getServerSideProps({ params, res }) {
+export async function getStaticProps({ params, res }) {
     const post = getPostBySlug(params.slug);
     const baseURL = getBaseURL('');
 
@@ -83,5 +83,16 @@ export async function getServerSideProps({ params, res }) {
                 baseURL
             }
         };
+    }
+}
+
+export async function getStaticPaths() {
+    const allPosts = await getAllPosts();
+
+    return {
+        paths: allPosts.map(
+            (post) => `/${post.attributes.link}`
+        ),
+        fallback: false
     }
 }

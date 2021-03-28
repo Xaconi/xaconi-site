@@ -65,5 +65,6 @@ export async function getStaticProps() {
 			},
 			baseURL
 	  	},
+		revalidate: 60,
 	}
 }

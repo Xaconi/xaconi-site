@@ -57,7 +57,7 @@ export default function Posts({ posts, baseURL }) {
 
 
 export async function getStaticProps() {
-	const posts = getAllPosts();
+	const posts = getAllPosts(true);
 	const baseURL = getBaseURL('');
 
 	return {
@@ -65,5 +65,6 @@ export async function getStaticProps() {
 			posts,
 			baseURL
 	  	},
+		revalidate: 60,
 	}
 }

@@ -34,7 +34,7 @@ export function getPostBySlug(slug) {
     return markdownParsedContent;
 }
 
-export function getAllPosts() {
+export function getAllPosts(onlyActive = false) {
     const postsDirectory = path.join(process.cwd(), 'posts');
     const filenames = fs.readdirSync(postsDirectory);
 
@@ -52,7 +52,9 @@ export function getAllPosts() {
             if(typeof fileContentsParsed.attributes.image == 'undefined')
 		        fileContentsParsed.attributes.image = null;
 
-            if(fileContentsParsed.attributes.active != false)
+            if(onlyActive && fileContentsParsed.attributes.active != false)
+                posts.push(fileContentsParsed);
+            else if(!onlyActive)
                 posts.push(fileContentsParsed);
         })
     }
