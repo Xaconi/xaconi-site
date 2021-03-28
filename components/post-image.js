@@ -5,7 +5,6 @@ import Image from 'next/image';
 import stylesImage from '../styles/Post.module.css';
 
 export default function PostImage(props) {
-    console.log(props);
     return(
         <p className={stylesImage.imageWrapper}>
             <span className={stylesImage.imageOverlay}>

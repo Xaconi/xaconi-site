@@ -8,12 +8,10 @@ import Markdown from 'markdown-to-jsx';
 import CodeBlock from '../components/code-block';
 import DateParser from '../components/date-parser';
 import PostImage from './post-image';
+import PostLink from './post-link';
 
 // Styles
 import postStyles from '../styles/Post.module.css';
-
-// Services
-import getBaseURL from '../services/urlService';
 
 export default function Article({title, image, content, link, date}) {
 
@@ -41,7 +39,8 @@ export default function Article({title, image, content, link, date}) {
                             pre: {
                                 component: CodeBlock,
                             },
-                            img: PostImage
+                            img: PostImage,
+                            a: PostLink
                         },
                     }}
                 >
