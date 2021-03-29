@@ -6,7 +6,7 @@ import path from 'path';
 import fm from 'front-matter';
 
 export default function getLastPost() {
-    const posts = getAllPosts();
+    const posts = getAllPosts(true);
 
     return posts[0];
 }
