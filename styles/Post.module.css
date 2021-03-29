@@ -49,12 +49,13 @@
 }
 
 .imageWrapper img {
-    border: 2px solid var(--color-dark-grey);
-    padding: 5px;
-    border-radius: 5px;
-    position: relative;
     background-color: var(--color-white);
+    border-radius: 5px;
+    border: 2px solid var(--color-dark-grey);
     display: block;
+    height: auto;
+    padding: 5px;
+    position: relative;
 }
 
 .imageWrapper .imageOverlay {
