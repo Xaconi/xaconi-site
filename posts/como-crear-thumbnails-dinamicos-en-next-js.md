@@ -19,7 +19,7 @@ Estos links son más complicados de "vender" en redes sociales y la larga, lo qu
 
 Los microbrowsers se utilizan todos los días, por casi todo el mundo que tenga un móvil/tablet/PC. Cada vez que se comparte un enlace por una red social como Facebook o Twitter, cuando se comparte un link por plataformas como Slack, Microsoft Teams, o directamente en servicios de mensajería como WhatsApp, Skype o Telegram. Siempre que se comparte un enlace en alguna de estas plataformas, la propia plataforma hace un *fetch* del enlace haciendo una query GET, y obteniendo resultados limitados para enseñarlos de forma más o menos elegante al usuario de la plataforma. Por eso, en vez de un texto solo con todo el enlace, la plataforma te enseña la imagen destacada que ha obtenido de la query GET al enlace, el *title* y la meta descripción. Esto es lo que hace un microbrowser, y se utilizan para formatear contenido de manera resumida en la plataforma donde se comparta el link.
 
-<img src="/posts/microbrowsers-post.png" alt="Compartir links con imágenes destacadas VS compartir links sin imágenes destacadas" width="650" height="350" />
+<img loading="lazy" src="/posts/microbrowsers-post.png" alt="Compartir links con imágenes destacadas VS compartir links sin imágenes destacadas" width="650" height="350" />
 
 A pesar de que se realice una query GET, esto no quiere decir que la plataforma reciba toda la página del link como si fuera una visita más a ese link. Los microbrowsers tienen las siguientes limitaciones:
 
@@ -43,7 +43,7 @@ La web [DEV.to](https://dev.to) es una plataforma de referencia para la publicac
 
 Casi siempre encuentro contenido de esta web compartido en mi timeline de Twitter, y muchas veces me he fijado en que, si bien algunos links disponen de una imagen destacada (subida por el propio autor del post), otras veces la imagen destacada que aparece es una donde sale el título del post, el autor, la fecha de publicación y algunas etiquetas donde salen logos del lenguage de programación. Desde que la vi por primera vez, pensé que se trataba de una solución muy ingeniosa y que conseguia destacar los posts de una manera sencilla y efectiva. Pero...cómo lo hacen?
 
-<img src="/posts/microbrowsers_dev_to.png" alt="Así se comparte el contenido en DEV.to...y mola un montón" width="585" height="540" />
+<img loading="lazy" src="/posts/microbrowsers_dev_to.png" alt="Así se comparte el contenido en DEV.to...y mola un montón" width="585" height="540" />
 
 ## Generando thumbnails dinámicos con Node y NextJS ##
 
