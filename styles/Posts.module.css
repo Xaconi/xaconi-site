@@ -21,6 +21,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 70%;
 }
 
 .articleInfo h2 {
@@ -39,6 +40,16 @@
     -webkit-box-orient: vertical;  
     overflow: hidden;
     margin: 5px 0 0 0;
+}
+
+@media (max-width: 767px) {
+    .article img {
+        display: none;
+    }
+
+    .articleInfo {
+        width: 100%;
+    }
 }
 
 @media (max-width : 475px) {
