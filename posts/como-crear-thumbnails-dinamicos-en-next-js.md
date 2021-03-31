@@ -226,7 +226,7 @@ Al final, consultando un hilo de una issue de [GitHub](https://github.com/vercel
 
 ## Código de ejemplo y demo ##
 
-En el repositorio de este blog podéis encontrar el ejemplo del código final, o bien podéis consultar directamnte [el link del thumbnail de mi primer post](https://xaconi.dev/api/social-image/bienvenidos-a-mi-blog.jpg). También os dejo en un CodePen un ejemplo de maquetación editable para que podáis jugar con la maquetación final del thumbnail. La gracia de poder editar la maquetación es que al final, como es parseada e interpretada por un Chrome headless, el resultado final de la imagen es el mismo.
+En el repositorio de este blog podéis encontrar el ejemplo del código final, o bien podéis consultar directamente [el link del thumbnail de mi primer post](https://xaconi.dev/api/social-image/bienvenidos-a-mi-blog.jpg). También os dejo en un CodePen un ejemplo de maquetación editable para que podáis jugar con la maquetación final del thumbnail. La gracia de poder editar la maquetación es que al final, como es parseada e interpretada por un Chrome headless, el resultado final de la imagen es el mismo.
 
 <iframe height="265" style="width: 100%;" scrolling="no" title="Thumbnail dinámico" src="https://codepen.io/Xaconi/embed/preview/xxgEWwW?height=265&theme-id=dark&default-tab=css,result" frameborder="no" loading="lazy">
   See the Pen <a href='https://codepen.io/Xaconi/pen/xxgEWwW'>Thumbnail dinámico</a> by Nicolas Giacconi
