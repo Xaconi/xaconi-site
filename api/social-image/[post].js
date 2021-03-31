@@ -35,6 +35,10 @@ export default async (req, res) => {
             ignoreHTTPSErrors: true,
         });
 
+        const tags = post.attributes.tags?.map((tag) => {
+            return `#${tag}`
+        }).join(' | ') || "";
+
         const page = await browser.newPage();
         page.setViewport({ width: 1128, height: 600 });
         page.setContent(`<html>
@@ -49,9 +53,7 @@ export default async (req, res) => {
                             <span>Xaconi.dev · ${ formattedDate } </span>
                         </div>
                         <div class="social-image-footer-right">
-                            ${post.attributes.tags.map((tag) => {
-                                return `#${tag}`
-                            }).join(' | ')}
+                            ${tags}
                         </div>
                     </div>
                 </div>

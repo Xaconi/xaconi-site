@@ -7,6 +7,9 @@ links:
 - https://www.40defiebre.com/que-es/ctr
 - https://css-tricks.com/microbrowsers-are-everywhere/
 - https://uxdesign.cc/do-you-know-what-a-microbrowser-is-a555f15f6cc8
+tags:
+- NextJS
+- Vercel
 ---
 
 ## ¿Cómo destacar tus posts en redes sociales? ##
@@ -94,6 +97,10 @@ export default async (req, res) => {
         ignoreHTTPSErrors: true,
     });
 
+    const tags = post.attributes.tags?.map((tag) => {
+        return `#${tag}`
+    }).join(' | ') || "";
+
     const page = await browser.newPage();
     page.setViewport({ width: 1128, height: 600 });
     page.setContent(`<html>
@@ -125,9 +132,7 @@ page.setContent(`<html>
                     <span>Xaconi.dev · ${ formattedDate } </span>
                 </div>
                 <div class="social-image-footer-right">
-                    ${post.attributes.tags.map((tag) => {
-                        return `#${tag}`
-                    }).join(' | ')}
+                    ${tags}
                 </div>
             </div>
         </div>
