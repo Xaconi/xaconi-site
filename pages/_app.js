@@ -1,5 +1,6 @@
 import '../styles/globals.css';
 import '../styles/code-js-syntax.css';
+import '../styles/code-html-syntax.css';
 
 // NextJS Core
 import { useRouter } from "next/router";

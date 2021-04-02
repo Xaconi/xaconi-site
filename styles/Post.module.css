@@ -110,6 +110,11 @@
     color: var(--color-dark-grey);
 }
 
+.post code[data-lang='html']::after {
+    background-color : var(--color-html);
+    color: var(--color-white);
+}
+
 .post code-block button {
     position: absolute;
     bottom: 0;
