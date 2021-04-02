@@ -44,7 +44,7 @@ En este blog, ya se habían integrado estas etiquetas para que cuando se compart
 
 La web [DEV.to](https://dev.to) es una plataforma de referencia para la publicación de contenido técnico relacionado con el desarrollo y la programación. Es una web que recomiendo mucho ya que ha conseguido una comunidad muy fiel y sobretodo muy pacífica con todo tipo de contenidos (algo complicado hoy en día en internet).
 
-Casi siempre encuentro contenido de esta web compartido en mi timeline de Twitter, y muchas veces me he fijado en que, si bien algunos links disponen de una imagen destacada (subida por el propio autor del post), otras veces la imagen destacada que aparece es una donde sale el título del post, el autor, la fecha de publicación y algunas etiquetas donde salen logos del lenguage de programación del que se habla en el post. Desde que la vi por primera vez, pensé que se trataba de una solución muy ingeniosa y que conseguia destacar los posts de una manera sencilla y efectiva. Pero...¿cómo lo hacen?
+Casi siempre encuentro contenido de esta web compartido en mi timeline de Twitter, y muchas veces me he fijado en que, si bien algunos links disponen de una imagen destacada (subida por el propio autor del post), otras veces la imagen destacada que aparece es una donde sale el título del post, el autor, la fecha de publicación y algunas etiquetas donde salen logos del lenguaje de programación del que se habla en el post. Desde que la vi por primera vez, pensé que se trataba de una solución muy ingeniosa y que conseguia destacar los posts de una manera sencilla y efectiva. Pero...¿cómo lo hacen?
 
 <img loading="lazy" src="/posts/microbrowsers_dev_to.png" alt="Así se comparte el contenido en DEV.to...y mola un montón" width="585" height="540" />
 
