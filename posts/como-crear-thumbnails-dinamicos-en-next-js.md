@@ -234,7 +234,6 @@ Finalmente, tendremos que colocar la llamada a esta función serverless en las e
             <!-- ... -->
         </body>
 </html>
-
 ```
 
 **¿Pues con esto ya estaríamos no?** Ya tenemos el código de generación del thumbnail en una función serverless, y esta función puede ser llamada haciendo una query GET desde cualquier navegador. Tan sólo hay que llamarla en las etiquetas metas descritas anteriormente para que conste como imagen destacada de los links compartidos en redes sociales. Ajustando esto en el componente que haga el render de la etiqueta head en nuestra web, y ya lo tendremos...no? Pues no, queda por arreglar alguna que otra cosilla...
