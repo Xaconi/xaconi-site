@@ -219,6 +219,24 @@ page.setContent(`<html>
 // ...
 ```
 
+Finalmente, tendremos que colocar la llamada a esta función serverless en las etiquetas correspondientes del HTML para que los microbrowsers, al leer la información básica del post, reciban esta imagen.
+
+```html
+<html>
+    <head>
+        <!-- ... -->
+        <meta property="og:image" content="https://xaconi.dev/api/social-image/como-crear-thumbnails-dinamicos-en-next-js.jpg">
+        <meta property="og:image:secure_url" content="https://xaconi.dev/api/social-image/como-crear-thumbnails-dinamicos-en-next-js.jpg">
+        <meta name="twitter:image:src" content="https://xaconi.dev/api/social-image/como-crear-thumbnails-dinamicos-en-next-js.jpg">
+        <!-- ... -->
+        </head>
+        <body>
+            <!-- ... -->
+        </body>
+</html>
+
+```
+
 **¿Pues con esto ya estaríamos no?** Ya tenemos el código de generación del thumbnail en una función serverless, y esta función puede ser llamada haciendo una query GET desde cualquier navegador. Tan sólo hay que llamarla en las etiquetas metas descritas anteriormente para que conste como imagen destacada de los links compartidos en redes sociales. Ajustando esto en el componente que haga el render de la etiqueta head en nuestra web, y ya lo tendremos...no? Pues no, queda por arreglar alguna que otra cosilla...
 
 ## Haciendo Deploy, bugs en Vercel... y cuidando el tamaño de nuestro bundle... ##
