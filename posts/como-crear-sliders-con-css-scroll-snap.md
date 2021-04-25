@@ -2,7 +2,7 @@
 title: Cómo crear sliders con CSS Scroll Snap
 date: '2021-04-25'
 description: La mejor manera de presentar contenido en redes sociales es gracias a los thumbnails dinámicos, quedan mucho mejor al compartir contenido!
-active: false
+active: true
 links:
 - https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-snap-type
 - https://www.40defiebre.com/que-es/ctr
