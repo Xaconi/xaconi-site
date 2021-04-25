@@ -3,6 +3,7 @@ title: Test article
 date: '2021-02-14'
 image: 'js_image.png'
 description: Test description.
+active: false
 tags:
 - test
 ---
