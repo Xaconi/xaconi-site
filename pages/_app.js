@@ -11,18 +11,19 @@ import { useEffect } from "react";
 function MyApp({ Component, pageProps }) {
 	const router = useRouter();
 
-	if(process.env.NODE_ENV != 'development') {
-		useEffect(() => {
-			const handleRouteChange = (url) => {
-				/* invoke analytics function only for production */
+	useEffect(() => {
+		const handleRouteChange = (url) => {
+			/* invoke analytics function only for production */
+			if(process.env.NODE_ENV != 'development') {
 				ga('send', 'pageview', url);
-			};
-			router.events.on("routeChangeComplete", handleRouteChange);
-			return () => {
-				router.events.off("routeChangeComplete", handleRouteChange);
-			};
-		}, [router.events]);
-	}
+			}
+		};
+		router.events.on("routeChangeComplete", handleRouteChange);
+		return () => {
+			router.events.off("routeChangeComplete", handleRouteChange);
+		};
+	}, [router.events]);
+
 	return <Component {...pageProps} />
 }
 

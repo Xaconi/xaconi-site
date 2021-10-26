@@ -37,7 +37,16 @@ export default function About({ baseURL }) {
                             height="250"
                         />
                         <h3>Hola 👋, soy Xaconi!</h3>
-                        <h4>Puedes seguirme en <a href="https://twitter.com/xaconi" target="_blank">Twitter 🐦</a> o en <a href="https://github.com/Xaconi" target="_blank">GitHub 🦑</a></h4>
+                        <h4>
+                            Puedes seguirme en 
+                            <a href="https://twitter.com/xaconi" rel="noopener noreferrer" target="_blank">
+                                Twitter 🐦
+                            </a> 
+                            o en 
+                            <a href="https://github.com/Xaconi" rel="noopener noreferrer" target="_blank">
+                                GitHub 🦑
+                            </a>
+                        </h4>
                     </div>
                     
                     <div className={stylesAbout.aboutColumn}>
