@@ -19,7 +19,7 @@ export function getPostBySlug(slug) {
 
     let markdownParsedContent = null;
 
-    if(filenameFound.length > 0) {
+    if (filenameFound.length > 0) {
         const filePath = path.join(postsDirectory, filenameFound[0]);
         const fileContents = fs.readFileSync(filePath, 'utf8');
 
@@ -27,8 +27,8 @@ export function getPostBySlug(slug) {
 
         markdownParsedContent.attributes.link = filenameFound[0].replace('.md', '');
 
-        if(typeof markdownParsedContent.attributes.image == 'undefined')
-		    markdownParsedContent.attributes.image = null;
+        if (typeof markdownParsedContent.attributes.image == 'undefined')
+            markdownParsedContent.attributes.image = null;
     }
 
     return markdownParsedContent;
@@ -40,7 +40,7 @@ export function getAllPosts(onlyActive = false) {
 
     let posts = Array();
 
-    if(filenames.length > 0) {
+    if (filenames.length > 0) {
         filenames.map((filename) => {
             const filePath = path.join(postsDirectory, filename);
             const fileContents = fs.readFileSync(filePath, 'utf8');
@@ -49,12 +49,12 @@ export function getAllPosts(onlyActive = false) {
 
             fileContentsParsed.attributes.link = filename.replace('.md', '');
 
-            if(typeof fileContentsParsed.attributes.image == 'undefined')
-		        fileContentsParsed.attributes.image = null;
+            if (typeof fileContentsParsed.attributes.image == 'undefined')
+                fileContentsParsed.attributes.image = null;
 
-            if(onlyActive && fileContentsParsed.attributes.active != false)
+            if (onlyActive && fileContentsParsed.attributes.active != false)
                 posts.push(fileContentsParsed);
-            else if(!onlyActive)
+            else if (!onlyActive)
                 posts.push(fileContentsParsed);
         })
     }

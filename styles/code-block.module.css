@@ -1,0 +1,41 @@
+.codeBlock {
+    position: relative;
+    display: block;
+}
+
+.codeBlock button {
+    position: absolute;
+    bottom: 0;
+    right: 30px;
+    border: none;
+    border-radius: 0;
+    padding: 4px 10px;
+    cursor: pointer;
+    background-color: var(--color-light-grey);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.codeBlock:hover button {
+    opacity: 1;
+}
+
+.codeBlock button svg {
+    width: 20px;
+}
+
+.codeBlock button span {
+    font-family: monospace;
+    font-size: 24px;
+    line-height: 26px;
+    padding-bottom: 5px;
+}
+
+@media (hover:none),
+(hover:on-demand) {
+    .codeBlock button {
+        opacity: 1 !important;
+    }
+}
