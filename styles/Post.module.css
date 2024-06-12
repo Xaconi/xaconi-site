@@ -1,6 +1,5 @@
 .post {
     max-width: var(--size-post-max);
-    margin: 30px auto 30px auto;
 }
 
 .postCenter {

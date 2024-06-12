@@ -1,15 +1,11 @@
-import styles from '../../styles/Home.module.css'
-
 import Article from '../../components/article';
-import Header from '../../components/header';
-import Footer from '../../components/footer';
 
 import { getAllPosts, getPostBySlug } from '../../services/postsService';
 import getBaseURL from '../../services/urlService';
 import { getMetadata } from '../../services/metaData';
 
 import { Metadata } from 'next';
-import { notFound, redirect } from 'next/navigation';
+import { notFound } from 'next/navigation';
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
     const { postContent, baseURL } = await getData(params.slug)
@@ -32,24 +28,16 @@ export default async function Post({ params }: { params: { slug: string } }) {
     if (postContent.title == '') notFound()
 
     return (
-        <div className={styles.container}>
-            <>
-                <Header />
-
-                <section className={styles.section}>
-                    <Article
-                        content={postContent.content}
-                        date={postContent.date}
-                        image={postContent.image}
-                        link={`${baseURL}/${postContent.link}`}
-                        title={postContent.title}
-                    >
-                    </Article>
-                </section>
-
-                <Footer />
-            </>
-        </div>
+        <>
+            <Article
+                content={postContent.content}
+                date={postContent.date}
+                image={postContent.image}
+                link={`${baseURL}/${postContent.link}`}
+                title={postContent.title}
+            >
+            </Article>
+        </>
     );
 }
 

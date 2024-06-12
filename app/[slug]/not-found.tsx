@@ -3,8 +3,6 @@
 
 import styles from '../../styles/404.module.css';
 
-import Header from '../../components/header';
-import Footer from '../../components/footer';
 import { Metadata } from 'next';
 import { getMetadata } from '@/services/metaData';
 
@@ -20,15 +18,9 @@ export const metadata: Metadata = getMetadata({
 export default function Page404() {
     return (
         <>
-            <Header />
-
-            <section className={styles.section}>
-                <h1>404 - Página no encontrada</h1>
-                <img alt="Página no encontrada" src="/let_it_burn.gif" />
-                <h3 className={styles.h3}>you not supposed to be here...</h3>
-            </section>
-
-            <Footer />
+            <h1>404 - Página no encontrada</h1>
+            <img alt="Página no encontrada" src="/let_it_burn.gif" />
+            <h3 className={styles.h3}>you not supposed to be here...</h3>
         </>
     );
 }

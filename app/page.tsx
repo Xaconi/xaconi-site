@@ -23,15 +23,12 @@ export default async function Home() {
   const { baseURL, lastPost } = await getData();
 
   return (
-    <div className={styles.container}>
-      <Header />
+    <>
+      <h1>Bienvenido a Xaconi.dev!🎉</h1>
 
-      <section className={styles.section}>
-        <h1>Bienvenido a Xaconi.dev!🎉</h1>
-        <p>Hola 👋! Soy Nicolás Joel Giacconi Fernández y soy programador! Aquí encontrarás mis posts sobre FrontEnd (Angular, Vue, React, NextJS...), BackEnd(JS, PHP...) y buenas prácticas. Me estoy forzando a escribir este blog para mejorar en mis habilidades de comunicación, y así aprovecho para aprender más cosas sobre el desarrollo web, que es mi profesión. Si tienes cualquier sugerencia, puedes enviarme una <code>Pull Request</code> al <a href="https://github.com/Xaconi/xaconi-site" target="_blank" rel="nofollow noopener noreferrer">repo público</a> de este blog y la reviso encantado.</p>
-      </section>
+      <p>Hola 👋! Soy Nicolás Joel Giacconi Fernández y soy programador! Aquí encontrarás mis posts sobre FrontEnd (Angular, Vue, React, NextJS...), BackEnd(JS, PHP...) y buenas prácticas. Me estoy forzando a escribir este blog para mejorar en mis habilidades de comunicación, y así aprovecho para aprender más cosas sobre el desarrollo web, que es mi profesión. Si tienes cualquier sugerencia, puedes enviarme una <code>Pull Request</code> al <a href="https://github.com/Xaconi/xaconi-site" target="_blank" rel="nofollow noopener noreferrer">repo público</a> de este blog y la reviso encantado.</p>
 
-      <section className={styles.section}>
+      <section>
         <h1>Último post</h1>
         <Article
           content={lastPost.content}
@@ -39,12 +36,9 @@ export default async function Home() {
           image={lastPost.image ? lastPost.image : ''}
           link={lastPost.link}
           title={lastPost.title}
-        >
-        </Article>
+        ></Article>
       </section>
-
-      <Footer />
-    </div>
+    </>
   )
 
 }

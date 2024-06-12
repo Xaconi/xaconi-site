@@ -1,8 +1,5 @@
-import styles from '../../styles/Home.module.css';
 import stylesPosts from '../../styles/Posts.module.css'
 
-import Header from '../../components/header';
-import Footer from '../../components/footer';
 import ArticleCard from '../../components/article-card';
 
 import { getAllPosts } from '../../services/postsService';
@@ -25,29 +22,23 @@ export default async function Posts() {
     const { baseURL, posts } = await getData()
 
     return (
-        <div className={styles.container}>
-            <Header />
-
-            <section className={styles.section}>
-                <h1>Mis Posts</h1>
-                <div className={stylesPosts.articles}>
-                    {posts.map((post) => {
-                        return (
-                            <ArticleCard
-                                title={post.attributes.title}
-                                description={post.attributes.description}
-                                image={post.attributes.image}
-                                link={post.attributes.link}
-                                key={post.attributes.link}
-                                date={post.attributes.date}
-                            />
-                        )
-                    })}
-                </div>
-            </section>
-
-            <Footer />
-        </div>
+        <>
+            <h1>Mis Posts</h1>
+            <div className={stylesPosts.articles}>
+                {posts.map((post) => {
+                    return (
+                        <ArticleCard
+                            title={post.attributes.title}
+                            description={post.attributes.description}
+                            image={post.attributes.image}
+                            link={post.attributes.link}
+                            key={post.attributes.link}
+                            date={post.attributes.date}
+                        />
+                    )
+                })}
+            </div>
+        </>
     );
 }
 
